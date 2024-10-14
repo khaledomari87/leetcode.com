@@ -6,9 +6,9 @@
     "configurations": [
         {
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Leet Code (see program in .vscode/launch.json)",
             "type": "node",
-            "program": "${workspaceFolder}/medium-15-3sum.ts",
+            "program": "${workspaceFolder}/medium-11-container-with-most-water.ts",
             "cwd": "${workspaceFolder}",
             "env": {},
             "runtimeExecutable": "/opt/homebrew/bin/deno",

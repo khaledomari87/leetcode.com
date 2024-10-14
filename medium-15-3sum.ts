@@ -5,11 +5,11 @@ function threeSum(nums: number[], target = 0): number[][] {
     nums.sort((a, b) => a - b);
     let index = 0;
     let value = nums[index];
-    let length = nums.length;
-    while (index < length - 2 && value <= target) {
+    let lastIndex = nums.length - 1;
+    while (index < lastIndex - 1 && value <= target) {
         const twoTarget = target - value;
         let left = index + 1;
-        let right = length - 1;
+        let right = lastIndex;
         while (left < right) {
             const sum = nums[left] + nums[right];
             if (sum === twoTarget) {

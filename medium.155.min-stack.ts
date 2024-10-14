@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/min-stack/
+
 class MinStack {
     constructor(private stack: number[], private minStack: number[]) {
         this.stack = [];

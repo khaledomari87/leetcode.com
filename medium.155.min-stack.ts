@@ -8,12 +8,16 @@ class MinStack {
     push(val: number): void {
         this.stack.push(val);
         const lastIndex = this.minStack.length - 1;
-        this.minStack.push(lastIndex < 0 ? val : Math.min(val, this.minStack[lastIndex]));
+        if (lastIndex < 0 || val <= this.minStack[lastIndex]) {
+            this.minStack.push(val);
+        }
     }
     pop(): void {
-        this.stack.pop();
-        this.minStack.pop();
+        if (this.stack.pop() === this.minStack[this.minStack.length - 1]) {
+            this.minStack.pop();
+        }
     }
+
     top(): number {
         return this.stack[this.stack.length - 1];
     }

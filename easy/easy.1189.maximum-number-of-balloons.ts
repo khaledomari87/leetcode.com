@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/maximum-number-of-balloons/description/
 
 function maxNumberOfBalloons(text: string): number {
-    const map = {b: 0, a: 0, l: 0, o: 0, n: 0 };
+    const map: {[key: string]: number} = {b: 0, a: 0, l: 0, o: 0, n: 0 };
     for (const char of text) {
         char in map && map[char]++;
     }
@@ -9,7 +9,7 @@ function maxNumberOfBalloons(text: string): number {
 };
 
 function maxNumberOfBalloons2(text: string): number {
-    const map = {'b': 0, 'a': 0, 'l': 0, 'o': 0, 'n': 0 };
+    const map: {[key: string]: number} = {'b': 0, 'a': 0, 'l': 0, 'o': 0, 'n': 0 };
     for (const char of text) {
         char in map && map[char]++;
     }

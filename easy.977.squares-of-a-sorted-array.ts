@@ -16,7 +16,7 @@ function sortedSquares(nums: number[]): number[] {
 };
 
 function sortedSquares2(nums: number[]): number[] {
-    const output = new Array();
+    const output = new Array<number>();
     let left = 0;
     for (let i = 1; i < nums.length; i++) {
         if (Math.abs(nums[i]) < Math.abs(nums[left])) {

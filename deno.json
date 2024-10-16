@@ -10,5 +10,12 @@
         "semiColons": true,
         "singleQuote": true,
         "proseWrap": "preserve"
+    },
+    "lint": {
+        "rules": {
+            "exclude": [
+                "no-unused-vars"
+            ]
+        }
     }
 }

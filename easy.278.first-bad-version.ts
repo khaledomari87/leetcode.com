@@ -7,6 +7,7 @@
  * };
  */
 
+// deno-lint-ignore no-var
 var solution = function (isBadVersion: (version: number) => boolean) {
     return function (right: number): number {
         let left = 1;

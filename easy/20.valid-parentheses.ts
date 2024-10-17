@@ -5,11 +5,11 @@ function isValid(s: string): boolean {
     const stack = new Array<string>();
     for (const char of s) {
         const open = map.get(char);
-        if (open === undefined ) {
+        if (open === undefined) {
             stack.push(char);
         } else if (open !== stack.pop()) {
             return false;
         }
     }
     return stack.length === 0;
-};
+}

@@ -5,11 +5,16 @@ function longestCommonPrefix(strs: string[]): string {
     const pop = strs.pop() || '';
     let index = 0;
     while (true) {
-        if(index === pop.length || !strs.every(value => index < value.length && value[index] === pop[index])) {
+        if (
+            index === pop.length ||
+            !strs.every((value) =>
+                index < value.length && value[index] === pop[index]
+            )
+        ) {
             break;
         }
         prefix += pop[index];
         index++;
     }
     return prefix;
-};
+}

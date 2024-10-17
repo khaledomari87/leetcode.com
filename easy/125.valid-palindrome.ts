@@ -1,9 +1,10 @@
 // https://leetcode.com/problems/valid-palindrome/
 
 function isPalindrome(s: string): boolean {
-    const isToSkip = (char: string): boolean => (char < 'A' || char > 'Z') && (char < '0' || char > '9');
+    const isToSkip = (char: string): boolean =>
+        (char < 'A' || char > 'Z') && (char < '0' || char > '9');
     let left = 0, right = s.length - 1;
-    while(left < right) {
+    while (left < right) {
         const lChar = s[left].toUpperCase();
         if (isToSkip(lChar)) {
             left++;
@@ -21,4 +22,4 @@ function isPalindrome(s: string): boolean {
         left++;
     }
     return true;
-};
+}

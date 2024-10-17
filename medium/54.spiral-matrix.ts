@@ -12,7 +12,7 @@ function spiralOrder(matrix: number[][]): number[] {
     const output = new Array<number>(),
         length = matrix.length * matrix[0].length;
     while (output.length < length) {
-        switch(direction) {
+        switch (direction) {
             case 'right':
                 while (j <= rightBorder) {
                     output.push(matrix[i][j]);
@@ -56,4 +56,4 @@ function spiralOrder(matrix: number[][]): number[] {
         }
     }
     return output;
-};
+}

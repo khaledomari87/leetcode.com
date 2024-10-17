@@ -13,4 +13,4 @@ function twoSum(nums: number[], target: number): number[] {
         }
     }
     return []; // We should never get here
-};
+}

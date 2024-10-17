@@ -13,7 +13,7 @@ function sortedSquares(nums: number[]): number[] {
         }
     }
     return output;
-};
+}
 
 function sortedSquares2(nums: number[]): number[] {
     const output = new Array<number>();
@@ -46,4 +46,4 @@ function sortedSquares2(nums: number[]): number[] {
     }
 
     return output;
-};
+}

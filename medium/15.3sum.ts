@@ -24,4 +24,4 @@ function threeSum(nums: number[], target = 0): number[][] {
         value = nums[index];
     }
     return output;
-};
+}

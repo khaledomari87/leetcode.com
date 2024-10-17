@@ -11,7 +11,7 @@ const isValidSudokuSequence = (arr: string[]) => {
         }
     }
     return true;
-}
+};
 
 function isValidSudoku(board: string[][]): boolean {
     const length = 9;
@@ -28,7 +28,8 @@ function isValidSudoku(board: string[][]): boolean {
             }
             cols[j][i] = board[i][j];
 
-            const boxIndex = boxLength * Math.trunc(i / boxLength) + Math.trunc(j / boxLength);
+            const boxIndex = boxLength * Math.trunc(i / boxLength) +
+                Math.trunc(j / boxLength);
             const eleIndex = boxLength * (i % boxLength) + j % boxLength;
             if (!boxes[boxIndex]) {
                 boxes[boxIndex] = new Array<string>(length);
@@ -38,9 +39,11 @@ function isValidSudoku(board: string[][]): boolean {
     }
     // return !cols.some(v => !isValidSudokuSequence(v)) && !boxes.some(v => !isValidSudokuSequence(v));
     for (let i = 0; i < length; i++) {
-        if (!isValidSudokuSequence(cols[i]) || !isValidSudokuSequence(boxes[i])) {
+        if (
+            !isValidSudokuSequence(cols[i]) || !isValidSudokuSequence(boxes[i])
+        ) {
             return false;
         }
     }
     return true;
-};
+}

@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/roman-to-integer/
 
 function romanToInt(s: string): number {
-    const mapper: {[key: string]: number} = {
+    const mapper: { [key: string]: number } = {
         'I': 1,
         'V': 5,
         'X': 10,

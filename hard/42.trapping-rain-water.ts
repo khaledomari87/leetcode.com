@@ -19,4 +19,4 @@ function trap(height: number[]): number {
         value > 0 && (output += value);
     }
     return output;
-};
+}

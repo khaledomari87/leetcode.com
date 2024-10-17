@@ -12,4 +12,4 @@ function groupAnagrams(strs: string[]): string[][] {
         }
     }
     return Array.from(map.values());
-};
+}

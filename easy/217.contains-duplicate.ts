@@ -10,4 +10,4 @@ function containsDuplicate(nums: number[]): boolean {
         set.add(num);
     }
     return false;
-};
+}

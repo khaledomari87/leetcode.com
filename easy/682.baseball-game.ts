@@ -4,7 +4,10 @@ function calPoints(operations: string[]): number {
     const stack = new Array<string | number>();
     for (const op of operations) {
         if (op === '+') {
-            stack.push((stack[stack.length - 1] as number) + (stack[stack.length - 2] as number));
+            stack.push(
+                (stack[stack.length - 1] as number) +
+                    (stack[stack.length - 2] as number),
+            );
         } else if (op === 'D') {
             stack.push(2 * (stack[stack.length - 1] as number));
         } else if (op === 'C') {
@@ -13,5 +16,8 @@ function calPoints(operations: string[]): number {
             stack.push(+op);
         }
     }
-    return stack.reduce((prev, curr) => (prev as number) + (curr as number), 0) as number;
-};
+    return stack.reduce(
+        (prev, curr) => (prev as number) + (curr as number),
+        0,
+    ) as number;
+}

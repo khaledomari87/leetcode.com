@@ -9,4 +9,4 @@ function isPerfectSquare(num: number): boolean {
         square < num ? left = mid + 1 : right = mid - 1;
     }
     return false;
-};
+}

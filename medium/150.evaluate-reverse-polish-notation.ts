@@ -23,4 +23,4 @@ function evalRPN(tokens: string[]): number {
         }
     }
     return stack[0];
-};
+}

@@ -14,4 +14,4 @@ function longestConsecutive(nums: number[]): number {
         }
     }
     return output;
-};
+}

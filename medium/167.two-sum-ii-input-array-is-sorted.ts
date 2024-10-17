@@ -11,4 +11,4 @@ function twoSum(numbers: number[], target: number): number[] {
         sum > target ? right-- : left++;
     }
     return [];
-};
+}

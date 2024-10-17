@@ -6,4 +6,4 @@ function isSubsequence(s: string, t: string): boolean {
         s[sp] === t[tp] && sp++;
     }
     return sp === s.length;
-};
+}

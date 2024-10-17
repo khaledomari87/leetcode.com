@@ -15,4 +15,4 @@ function majorityElement(nums: number[]): number {
         }
     }
     return output;
-};
+}

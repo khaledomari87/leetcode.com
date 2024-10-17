@@ -8,4 +8,4 @@ function reverseString(s: string[]): void {
         const right = s.length - left - 1;
         [s[left], s[right]] = [s[right], s[left]];
     }
-};
+}

@@ -28,8 +28,7 @@ function copyRandomList(inputHead: _Node | null): _Node | null {
     clonePointer = map.get(inputHead)!;
     inputPointer = inputHead;
     while (inputPointer) {
-        clonePointer.random =
-            inputPointer.random && map.get(inputPointer.random) || null;
+        clonePointer.random = inputPointer.random && map.get(inputPointer.random) || null;
         inputPointer = inputPointer.next;
         clonePointer = clonePointer.next!;
     }

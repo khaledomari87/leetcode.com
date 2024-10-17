@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/search-a-2d-matrix/
+
 function searchMatrix(matrix: number[][], target: number): boolean {
     const colsLength = matrix[0].length;
     let L = 0, R = matrix.length * colsLength - 1;

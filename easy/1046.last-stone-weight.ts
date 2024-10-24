@@ -12,4 +12,3 @@ function lastStoneWeight(stones: number[]): number {
     }
     return (queue.front() as PriorityQueueItem<number>)?.element || 0;
 }
-

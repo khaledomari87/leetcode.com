@@ -65,10 +65,10 @@ export class Heap<T> {
             this.heap[0] = end!;
             this.bubbleDown();
         }
-        return { element: max };
+        return max;
     }
-    front() {
-        return { element: this.heap[0] };
+    front(): T | undefined {
+        return this.heap[0];
     }
     toArray() {
         return this.heap;

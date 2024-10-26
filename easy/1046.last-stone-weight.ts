@@ -1,14 +1,13 @@
 // https://leetcode.com/problems/last-stone-weight/
 
-import { MaxPriorityQueue, type PriorityQueueItem } from '@datastructures-js/priority-queue';
+import { Heap } from '../assets/heap.ts';
 
 function lastStoneWeight(stones: number[]): number {
-    const queue = new MaxPriorityQueue<number>();
+    const queue = new Heap<number>((a, b) => b - a);
     stones.forEach((s) => queue.enqueue(s));
-    while (queue.size() > 1) {
-        const diff = (queue.dequeue() as PriorityQueueItem<number>).element -
-            (queue.dequeue() as PriorityQueueItem<number>).element;
+    while (queue.size > 1) {
+        const diff = queue.dequeue() - queue.dequeue();
         diff && queue.enqueue(diff);
     }
-    return (queue.front() as PriorityQueueItem<number>)?.element || 0;
+    return queue.front() || 0;
 }

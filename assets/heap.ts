@@ -58,7 +58,7 @@ export class Heap<T> {
         this.heap.push(val);
         this.bubbleUp();
     }
-    dequeue() {
+    dequeue(): T | undefined {
         const max = this.heap[0];
         const end = this.heap.pop();
         if (this.heap.length > 0) {
@@ -72,5 +72,17 @@ export class Heap<T> {
     }
     toArray() {
         return this.heap;
+    }
+}
+
+export class MinHeap extends Heap<number> {
+    constructor() {
+        super((a, b) => a - b);
+    }
+}
+
+export class MaxHeap extends Heap<number> {
+    constructor() {
+        super((a, b) => b - a);
     }
 }

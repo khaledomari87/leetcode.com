@@ -3,11 +3,11 @@
 import { Heap } from '../assets/heap.ts';
 
 function lastStoneWeight(stones: number[]): number {
-    const queue = new Heap<number>((a, b) => b - a);
-    stones.forEach((s) => queue.enqueue(s));
-    while (queue.size > 1) {
-        const diff = queue.dequeue() - queue.dequeue();
-        diff && queue.enqueue(diff);
+    const maxHeap = new Heap<number>((a, b) => b - a);
+    stones.forEach((s) => maxHeap.enqueue(s));
+    while (maxHeap.size > 1) {
+        const diff = maxHeap.dequeue()! - maxHeap.dequeue()!;
+        diff && maxHeap.enqueue(diff);
     }
-    return queue.front() || 0;
+    return maxHeap.front() || 0;
 }

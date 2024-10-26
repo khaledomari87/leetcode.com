@@ -7,7 +7,7 @@ function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
     const minHeap = lists.reduce((prev, node, index) => {
         node && prev.enqueue({ node, listIndex: index });
         return prev;
-    }, new Heap<{ node: ListNode; listIndex: number }>((a, b) => a.node.val - b.node.val))
+    }, new Heap<{ node: ListNode; listIndex: number }>((a, b) => a.node.val - b.node.val));
 
     let head: ListNode | null = null;
     let current: ListNode | null = head;

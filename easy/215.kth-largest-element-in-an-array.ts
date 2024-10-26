@@ -4,16 +4,16 @@ import { Heap } from '../assets/heap.ts';
 
 const findKthLargest = function (nums: number[], k: number): number {
     // leetcode MinPriorityQueue is slow for some reason!
-    const queue = new Heap<number>((a, b) => a - b);
+    const minHeap = new Heap<number>((a, b) => a - b);
     for (let i = 0; i < nums.length; i++) {
         if (i < k) {
-            queue.enqueue(nums[i]);
-        } else if (nums[i] > queue.front()!) {
-            queue.dequeue();
-            queue.enqueue(nums[i]);
+            minHeap.enqueue(nums[i]);
+        } else if (nums[i] > minHeap.front()!) {
+            minHeap.dequeue();
+            minHeap.enqueue(nums[i]);
         }
     }
-    return queue.front()!;
+    return minHeap.front()!;
 };
 
 function findKthLargest2(nums: number[], k: number): number {

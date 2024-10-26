@@ -15,4 +15,3 @@ export class ListNode {
         return arr;
     }
 }
-

@@ -9,21 +9,8 @@ export class Heap<T> {
     constructor(comparator: (a: T, b: T) => number) {
         this.comparator = comparator;
     }
-    enqueue(val: T) {
-        this.heap.push(val);
-        this.bubbleUp();
-    }
-    dequeue() {
-        const max = this.heap[0];
-        const end = this.heap.pop();
-        if (this.heap.length > 0) {
-            this.heap[0] = end!;
-            this.bubbleDown();
-        }
-        return { element: max };
-    }
-    front() {
-        return { element: this.heap[0] };
+    get size() {
+        return this.heap.length;
     }
     private bubbleUp() {
         let idx = this.heap.length - 1;
@@ -66,5 +53,24 @@ export class Heap<T> {
             this.heap[swap] = element;
             idx = swap;
         }
+    }
+    enqueue(val: T) {
+        this.heap.push(val);
+        this.bubbleUp();
+    }
+    dequeue() {
+        const max = this.heap[0];
+        const end = this.heap.pop();
+        if (this.heap.length > 0) {
+            this.heap[0] = end!;
+            this.bubbleDown();
+        }
+        return { element: max };
+    }
+    front() {
+        return { element: this.heap[0] };
+    }
+    toArray() {
+        return this.heap;
     }
 }

@@ -3,19 +3,9 @@
 function longestSquareStreak(nums: number[]): number {
     const set = new Set(nums), values = set.values();
     let output = -1, currentVal: undefined | number;
-    while ((currentVal = values.next().value)) {
-        let streak = 0;
-        do {
-            streak++;
-            set.delete(currentVal);
-            let prevVal = Math.sqrt(currentVal);
-            while (set.has(prevVal)) {
-                set.delete(prevVal);
-                prevVal = Math.sqrt(prevVal);
-                streak++;
-            }
-            currentVal *= currentVal;
-        } while (set.has(currentVal));
+    while (output < 4 && (currentVal = values.next().value)) {
+        let streak = 1;
+        while (set.has(currentVal *= currentVal)) streak++;
         streak > 1 && (output = Math.max(output, streak));
     }
     return output;

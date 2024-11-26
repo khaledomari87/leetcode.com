@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/find-champion-ii/
+// https://leetcode.com/problems/find-champion-ii/solutions/6085278/optimum-solution-2ms/
 
 function findChampion(n: number, edges: [number, number][]): number {
     const nodesWithParents = new Array<boolean>(n);

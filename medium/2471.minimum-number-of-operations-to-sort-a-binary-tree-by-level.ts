@@ -23,7 +23,7 @@ function minSwapsToSort(arr: number[]): number {
             const targetIndex = valueToIndexMap.get(sorted[i])!;
             [arr[i], arr[targetIndex]] = [arr[targetIndex], arr[i]];
             valueToIndexMap.set(arr[targetIndex], targetIndex);
-         }
+        }
         return count;
     }, 0);
 }

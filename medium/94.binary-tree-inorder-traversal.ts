@@ -1,15 +1,6 @@
 // https://leetcode.com/problems/binary-tree-inorder-traversal/solutions/6140409/simplest-solution-dfs/
 
-class TreeNode {
-    val: number;
-    left: TreeNode | null;
-    right: TreeNode | null;
-    constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-        this.val = val === undefined ? 0 : val;
-        this.left = left === undefined ? null : left;
-        this.right = right === undefined ? null : right;
-    }
-}
+import type TreeNode from '../assets/TreeNode.ts';
 
 function inorderTraversal(root: TreeNode | null): number[] {
     const output: number[] = [];

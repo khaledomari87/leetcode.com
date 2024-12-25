@@ -7,7 +7,7 @@ export const toMap = (edges: number[][], isBidirect: boolean) => {
 };
 
 export const toJson = (edges: [number, number][], isBidirect: boolean) => {
-    const output: { [key: number]: number[] } = {};
+    const output: Record<number, number[]> = {};
     for (const e of edges) {
         if (!(e[0] in output)) {
             output[e[0]] = [];

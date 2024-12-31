@@ -6,7 +6,7 @@ function mincostTickets(days: number[], costs: [number, number, number]): number
     for (let i = days.length - 1; i >= 0; i--) {
         cache[i] = Number.POSITIVE_INFINITY;
         let j = i;
-        durToCostMap.forEach(item => {
+        durToCostMap.forEach((item) => {
             while (j < days.length && days[j] < days[i] + item[0]) j++;
             cache[i] = Math.min(cache[i], cache[j] + item[1]);
         });

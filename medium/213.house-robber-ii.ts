@@ -2,16 +2,16 @@
 
 const rob = (nums: number[]): number => {
     if (nums.length <= 3) return Math.max(...nums);
-    const backtrack = (i: number, length: number): number => {
-        if (i >= length) return 0;
+    const backtrack = (i: number): number => {
+        if (i >= cache.length) return 0;
         if (cache[i] !== undefined) return cache[i];
-        cache[i] = nums[i] + Math.max(backtrack(i + 2, length), backtrack(i + 3, length));
+        cache[i] = nums[i] + Math.max(backtrack(i + 2), backtrack(i + 3));
         return cache[i];
     };
     let cache = new Array<number>(nums.length - 1);
-    const res1 = Math.max(backtrack(0, cache.length), backtrack(1, cache.length));
+    const res1 = Math.max(backtrack(0), backtrack(1));
     cache = new Array<number>(nums.length);
-    const res2 = Math.max(backtrack(1, cache.length), backtrack(2, cache.length));
+    const res2 = Math.max(backtrack(1), backtrack(2));
     return Math.max(res1, res2);
 };
 

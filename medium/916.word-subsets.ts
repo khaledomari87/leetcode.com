@@ -16,8 +16,5 @@ function wordSubsets(A: string[], B: string[]) {
             outer,
         ), new Array<number>(26).fill(0));
 
-    return A.reduce(
-        (res, a) => count(a).every((c, i) => c >= bmax[i]) && res.push(a) && res || res,
-        [] as string[],
-    );
+    return A.filter((a) => count(a).every((c, i) => c >= bmax[i]));
 }

@@ -15,6 +15,8 @@ function canBeValid(s: string, locked: string) {
         }
     }
 
+    if (!unlockedCount) return true;
+
     // Match remaining open brackets with unlocked characters.
     for (let i = s.length - 1, balanceCount = 0; i >= 0; i--) {
         if (locked[i] === '0') {

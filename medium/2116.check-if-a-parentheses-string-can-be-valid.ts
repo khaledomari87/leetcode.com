@@ -8,13 +8,12 @@ function canBeValid(s: string, locked: string) {
     for (let i = 0; i < s.length; i++) {
         if (locked[i] === '0') unlockedCount++;
         else if (s[i] === '(') openCount++;
-        else if (s[i] === ')') {
+        else {
             if (openCount > 0) openCount--;
             else if (unlockedCount > 0) unlockedCount--;
             else return false;
         }
     }
-
     if (!unlockedCount) return true;
 
     // Match remaining open brackets with unlocked characters.

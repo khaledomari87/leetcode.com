@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/find-if-array-can-be-sorted/solutions/6014559/linear-solution/
 
+import countOnes from '../assets/countOnes.ts';
+
 function canSortArray(nums: number[]): boolean {
     let currMin = nums[0];
     let currMax = currMin;
@@ -18,10 +20,4 @@ function canSortArray(nums: number[]): boolean {
         if (nums[i] < prevMax) return false;
     }
     return true;
-}
-
-function countOnes(num: number) {
-    let count = 0;
-    for (const b of num.toString(2)) b === '1' && count++;
-    return count;
 }

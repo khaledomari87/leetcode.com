@@ -1,17 +1,14 @@
 // https://leetcode.com/problems/find-eventual-safe-states/solutions/6322708/dfs/
 
 function eventualSafeNodes(graph: number[][]) {
-    function dfs(index: number): boolean {
-        if (inStack[index]) return true;
-        if (visit[index]) return false;
-        visit[index] = inStack[index] = true;
-        for (const neighbor of graph[index]) {
-            if (dfs(neighbor)) return true;
+    function dfs(i: number): boolean {
+        if (safe[i] !== undefined) return safe[i];
+        safe[i] = false;
+        for (const neighbor of graph[i]) {
+            if (!dfs(neighbor)) return false;
         }
-        return inStack[index] = false;
+        return safe[i] = true;
     }
-    const visit: boolean[] = new Array(graph.length).fill(false);
-    const inStack: boolean[] = new Array(graph.length).fill(false);
-    for (let i = 0; i < graph.length; i++) dfs(i);
-    return inStack.reduce((res, val, i) => !val && res.push(i) && res || res, [] as number[]);
+    const safe: boolean[] = new Array(graph.length);
+    return graph.reduce((res, _, i) => dfs(i) && res.push(i) && res || res, [] as number[]);
 }

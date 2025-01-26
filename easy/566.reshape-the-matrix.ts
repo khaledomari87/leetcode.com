@@ -7,9 +7,11 @@ function matrixReshape(mat: number[][], r: number, c: number) {
     const res: number[][] = new Array(r);
     for (let i = 0; i < r; i++) res[i] = new Array(c);
 
-    mat.forEach((row, i) => row.forEach((v, j) =>{
-        const k = i * n + j;
-        res[Math.floor(k / c)][k % c] = v;
-    }));
+    mat.forEach((row, i) =>
+        row.forEach((v, j) => {
+            const k = i * n + j;
+            res[Math.floor(k / c)][k % c] = v;
+        })
+    );
     return res;
 }

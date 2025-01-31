@@ -17,11 +17,11 @@ function largestIsland(grid: (0 | 1)[][]) {
     const directions = [[1, 0], [0, 1], [-1, 0], [0, -1]];
     let id = 0;
     grid.forEach((row, r) => row.forEach((bin, c) => bin && setSnID(r, c, calcSize(r, c), ++id)));
+    if (id >= grid.length * grid.length - 1) return grid.length * grid.length;
 
     return grid.reduce((maxRes, row, r) =>
         row.reduce((rowRes, bin, c) => {
-            if (bin) return !rowRes ? sizes[r][c] : rowRes;
-            else {
+            if (!bin) {
                 let size = 1;
                 const set = new Set<number>();
                 directions.forEach((offset) => {
@@ -31,7 +31,8 @@ function largestIsland(grid: (0 | 1)[][]) {
                         set.add(IDs[nr][nc]);
                     }
                 });
-                return Math.max(rowRes, size);
+                rowRes = Math.max(rowRes, size);
             }
+            return rowRes;
         }, maxRes), 0);
 }

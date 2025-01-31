@@ -7,22 +7,23 @@ function largestIsland(grid: (0 | 1)[][]) {
         sizes[r][c] = 1;
         return directions.reduce((acc, o) => acc + calcSize(r + o[0], c + o[1]), 1);
     };
-    const setSnID = (r: number, c: number, size: number, id: string): void => {
+    const setSnID = (r: number, c: number, size: number, id: number): void => {
         if (!checkBoundaries(r, c) || !grid[r][c] || IDs[r][c]) return;
         sizes[r][c] = size, IDs[r][c] = id;
         directions.forEach((o) => setSnID(r + o[0], c + o[1], size, id));
     };
     const sizes: number[][] = new Array(grid.length).fill([]).map(() => new Array(grid.length));
-    const IDs: string[][] = new Array(grid.length).fill([]).map(() => new Array(grid.length));
+    const IDs: number[][] = new Array(grid.length).fill([]).map(() => new Array(grid.length));
     const directions = [[1, 0], [0, 1], [-1, 0], [0, -1]];
-    grid.forEach((row, r) => row.forEach((bin, c) => bin && setSnID(r, c, calcSize(r, c), `${r},${c}`)));
+    let id = 0;
+    grid.forEach((row, r) => row.forEach((bin, c) => bin && setSnID(r, c, calcSize(r, c), ++id)));
 
     return grid.reduce((maxRes, row, r) =>
         row.reduce((rowRes, bin, c) => {
             if (bin) return !rowRes ? sizes[r][c] : rowRes;
             else {
                 let size = 1;
-                const set = new Set<string>();
+                const set = new Set<number>();
                 directions.forEach((offset) => {
                     const nr = r + offset[0], nc = c + offset[1];
                     if (checkBoundaries(nr, nc) && sizes[nr][nc] && !set.has(IDs[nr][nc])) {

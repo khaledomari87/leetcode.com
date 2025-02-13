@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/merge-k-sorted-lists/
 
-import { Heap } from '../assets/heap.ts';
+import { Heap } from '../assets/Heap.ts';
 import { ListNode } from '../assets/linkedlist.ts';
 
 function mergeKLists(lists: Array<ListNode | null>): ListNode | null {

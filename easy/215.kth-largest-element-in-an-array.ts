@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/kth-largest-element-in-an-array/
 
-import { Heap } from '../assets/heap.ts';
+import { Heap } from '../assets/Heap.ts';
 
 const findKthLargest = function (nums: number[], k: number): number {
     // leetcode MinPriorityQueue is slow for some reason!

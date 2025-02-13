@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii/solutions/
 
-import { Heap } from '../assets/heap.ts';
+import { Heap } from '../assets/Heap.ts';
 
 function minOperations(nums: number[], k: number) {
     const n = nums.length;

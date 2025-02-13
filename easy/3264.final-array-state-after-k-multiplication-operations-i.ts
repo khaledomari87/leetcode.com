@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/solutions/6152994/optimum-solution-using-minimum-heap-o-n-k-log-n/
 
-import { Heap } from '../assets/heap.ts';
+import { Heap } from '../assets/Heap.ts';
 
 function getFinalState(nums: number[], k: number, m: number): number[] {
     // [value in nums, index in nums]

@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/top-k-frequent-elements/
 
-import { Heap } from '../assets/heap.ts';
+import { Heap } from '../assets/Heap.ts';
 
 // Time: O(n), Space: O(n)
 function topKFrequent(nums: number[], k: number): number[] {

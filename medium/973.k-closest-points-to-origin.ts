@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/k-closest-points-to-origin/
 
-import { Heap } from '../assets/heap.ts';
+import { Heap } from '../assets/Heap.ts';
 
 function kClosest(points: [number, number][], k: number): number[][] {
     const maxHeap = new Heap<{ dis: number; p: typeof points[number] }>((a, b) => b.dis - a.dis);

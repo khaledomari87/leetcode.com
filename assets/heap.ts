@@ -1,14 +1,14 @@
 export class Heap<T> {
-    private heap: T[] = [];
+    private heap: T[];
     private comparator: (a: T, b: T) => number;
     /**
      * Construct a new Heap with the given comparator.
      * @param comparator - The comparator to use when ordering values in the heap.
      * For MinHeap use (a, b) => a - b, for MaxHeap use (a, b) => b - a
      */
-    constructor(comparator: (a: T, b: T) => number, arr?: T[]) {
+    constructor(comparator: (a: T, b: T) => number, arr: T[] = []) {
         this.comparator = comparator;
-        arr && (this.heap = Heap.heapify(arr, this.comparator));
+        Heap.heapify(this.heap = arr, this.comparator);
     }
     get size() {
         return this.heap.length;
@@ -82,7 +82,6 @@ export class Heap<T> {
                 const leftChildIdx = 2 * idx + 1;
                 const rightChildIdx = 2 * idx + 2;
                 let smallest = idx;
-
                 if (leftChildIdx < length && comparator(arr[leftChildIdx], arr[smallest]) < 0) {
                     smallest = leftChildIdx;
                 }
@@ -90,7 +89,6 @@ export class Heap<T> {
                     smallest = rightChildIdx;
                 }
                 if (smallest === idx) break;
-
                 [arr[idx], arr[smallest]] = [arr[smallest], arr[idx]];
                 idx = smallest;
             }
@@ -98,6 +96,5 @@ export class Heap<T> {
         for (let i = Math.floor(arr.length / 2) - 1; i >= 0; i--) {
             siftDown(i);
         }
-        return arr;
     }
 }

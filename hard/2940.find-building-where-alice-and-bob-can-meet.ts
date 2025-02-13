@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/find-building-where-alice-and-bob-can-meet/solutions/6174222/minimum-heap-by-khaled-alomari-3x9z/
 
-import { Heap } from '../assets/heap.ts';
+import { Heap } from '../assets/Heap.ts';
 
 function leftmostBuildingQueries(heights: number[], queries: [number, number][]): number[] {
     const output = new Array<number>(queries.length).fill(-1);

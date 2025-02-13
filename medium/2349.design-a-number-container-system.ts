@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/design-a-number-container-system/solutions/6391919/min-heap/
 
-import { Heap } from '../assets/heap.ts';
+import { Heap } from '../assets/Heap.ts';
 
 class NumberContainers {
     private numberToIndices = new Map<number, Heap<number>>();

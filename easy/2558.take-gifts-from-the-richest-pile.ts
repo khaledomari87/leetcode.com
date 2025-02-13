@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/take-gifts-from-the-richest-pile/solutions/6138611/max-heap/
 
-import { Heap } from '../assets/heap.ts';
+import { Heap } from '../assets/Heap.ts';
 
 function pickGifts(gifts: number[], k: number): number {
     const maxHeap = new Heap<number>((a, b) => b - a);

@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/last-stone-weight/
 
-import { Heap } from '../assets/heap.ts';
+import { Heap } from '../assets/Heap.ts';
 
 function lastStoneWeight(stones: number[]): number {
     const maxHeap = new Heap<number>((a, b) => b - a);

@@ -6,8 +6,9 @@ export class Heap<T> {
      * @param comparator - The comparator to use when ordering values in the heap.
      * For MinHeap use (a, b) => a - b, for MaxHeap use (a, b) => b - a
      */
-    constructor(comparator: (a: T, b: T) => number) {
+    constructor(comparator: (a: T, b: T) => number, arr?: T[]) {
         this.comparator = comparator;
+        arr && (this.heap = Heap.heapify(arr, this.comparator));
     }
     get size() {
         return this.heap.length;
@@ -73,16 +74,30 @@ export class Heap<T> {
     toArray() {
         return this.heap;
     }
-}
+    static heapify<T>(arr: T[], comparator: (a: T, b: T) => number) {
+        const siftDown = (index: number) => {
+            let idx = index;
+            const length = arr.length;
+            while (true) {
+                const leftChildIdx = 2 * idx + 1;
+                const rightChildIdx = 2 * idx + 2;
+                let smallest = idx;
 
-export class MinHeap extends Heap<number> {
-    constructor() {
-        super((a, b) => a - b);
-    }
-}
+                if (leftChildIdx < length && comparator(arr[leftChildIdx], arr[smallest]) < 0) {
+                    smallest = leftChildIdx;
+                }
+                if (rightChildIdx < length && comparator(arr[rightChildIdx], arr[smallest]) < 0) {
+                    smallest = rightChildIdx;
+                }
+                if (smallest === idx) break;
 
-export class MaxHeap extends Heap<number> {
-    constructor() {
-        super((a, b) => b - a);
+                [arr[idx], arr[smallest]] = [arr[smallest], arr[idx]];
+                idx = smallest;
+            }
+        };
+        for (let i = Math.floor(arr.length / 2) - 1; i >= 0; i--) {
+            siftDown(i);
+        }
+        return arr;
     }
 }

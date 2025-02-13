@@ -1,3 +1,4 @@
+// deno-lint-ignore-file
 class Heap {
     constructor(comparator, arr = []) {
         this.heap = [];

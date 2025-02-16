@@ -76,25 +76,22 @@ export class Heap<T> {
     }
     static heapify<T>(arr: T[], comparator: (a: T, b: T) => number) {
         const siftDown = (index: number) => {
-            let idx = index;
             const length = arr.length;
             while (true) {
-                const leftChildIdx = 2 * idx + 1;
-                const rightChildIdx = 2 * idx + 2;
-                let smallest = idx;
+                const leftChildIdx = 2 * index + 1;
+                const rightChildIdx = 2 * index + 2;
+                let smallest = index;
                 if (leftChildIdx < length && comparator(arr[leftChildIdx], arr[smallest]) < 0) {
                     smallest = leftChildIdx;
                 }
                 if (rightChildIdx < length && comparator(arr[rightChildIdx], arr[smallest]) < 0) {
                     smallest = rightChildIdx;
                 }
-                if (smallest === idx) break;
-                [arr[idx], arr[smallest]] = [arr[smallest], arr[idx]];
-                idx = smallest;
+                if (smallest === index) break;
+                [arr[index], arr[smallest]] = [arr[smallest], arr[index]];
+                index = smallest;
             }
         };
-        for (let i = Math.floor(arr.length / 2) - 1; i >= 0; i--) {
-            siftDown(i);
-        }
+        for (let i = Math.floor(arr.length / 2) - 1; i >= 0; i--) siftDown(i);
     }
 }

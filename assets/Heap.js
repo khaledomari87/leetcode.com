@@ -56,18 +56,18 @@ class Heap {
     }
     static heapify(arr, comparator) {
         const siftDown = (index) => {
-            let idx = index, length = arr.length;
+            const length = arr.length;
             while (true) {
-                const leftChildIdx = 2 * idx + 1, rightChildIdx = 2 * idx + 2, smallest = idx;
+                const leftChildIdx = 2 * index + 1, rightChildIdx = 2 * index + 2, smallest = index;
                 if (leftChildIdx < length && comparator(arr[leftChildIdx], arr[smallest]) < 0) {
                     smallest = leftChildIdx;
                 }
                 if (rightChildIdx < length && comparator(arr[rightChildIdx], arr[smallest]) < 0) {
                     smallest = rightChildIdx;
                 }
-                if (smallest === idx) break;
-                [arr[idx], arr[smallest]] = [arr[smallest], arr[idx]];
-                idx = smallest;
+                if (smallest === index) break;
+                [arr[index], arr[smallest]] = [arr[smallest], arr[index]];
+                index = smallest;
             }
         };
         for (let i = Math.floor(arr.length / 2) - 1; i >= 0; i--) siftDown(i);

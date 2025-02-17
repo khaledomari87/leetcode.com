@@ -2,15 +2,14 @@
 
 function numTilePossibilities(tiles: string): number {
     const backtrack = (): number => {
-        let res = 0;
-        for (let i = 0; i < counts.length; i++) {
-            if (counts[i] > 0) {
+        return counts.reduce((res, count, i) => {
+            if (count > 0) {
                 counts[i]--;
                 res += 1 + backtrack();
                 counts[i]++;
             }
-        }
-        return res;
+            return res;
+        }, 0);
     };
     const counts = new Array<number>(26).fill(0);
     for (let i = 0, A = 'A'.charCodeAt(0); i < tiles.length; i++) {

@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/solutions/6441159/combinatorics-approach/
+
 function getHappyString(n: number, k: number) {
     if (k > 2 ** (n - 1) * 3) return '';
 
@@ -12,4 +14,16 @@ function getHappyString(n: number, k: number) {
         else (res += nextGreatest[res.charCodeAt(i - 1) - a]) && (k -= midpoint);
     }
     return res;
+}
+
+function getHappyString2(n: number, k: number) {
+    const total = 3 * (2 ** (n - 1));
+    if (total < k) return '';
+    const next = [[1, 2], [0, 2], [0, 1]] as const;
+    const aCode = 'a'.charCodeAt(0); // 97
+    const res: number[] = [aCode + +(k > total / 3) + +(k-- > 2 * total / 3)];
+    for (let i = 1; i < n; ++i) {
+        res.push(aCode + next[res[i - 1] - aCode][+((k & (2 ** (n - i - 1))) > 0)]);
+    }
+    return String.fromCharCode(...res);
 }

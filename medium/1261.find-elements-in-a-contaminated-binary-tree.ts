@@ -8,8 +8,8 @@ class FindElements {
         const dfs = (node: TreeNode | null, val: number) => {
             if (!node) return;
             this.set.add(val);
-            dfs(node.left, val * 2 + 1);
-            dfs(node.right, val * 2 + 2);
+            dfs(node.left, val = val * 2 + 1);
+            dfs(node.right, val + 1);
         };
         dfs(root, 0);
     }

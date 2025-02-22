@@ -3,8 +3,8 @@
 function shortestCompletingWord(licensePlate: string, words: string[]) {
     const aCode = 'a'.charCodeAt(0);
     const letters: number[] = new Array(26).fill(0);
-    for (let c of licensePlate) {
-        (c = c.toLowerCase()) >= 'a' && c <= 'z' && letters[c.charCodeAt(0) - aCode]++;
+    for (const c of licensePlate.toLowerCase()) {
+        c >= 'a' && c <= 'z' && letters[c.charCodeAt(0) - aCode]++;
     }
     return words.reduce((res, w) => {
         const cnts: typeof letters = new Array(26).fill(0);

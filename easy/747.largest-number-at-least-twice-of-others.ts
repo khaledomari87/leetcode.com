@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/largest-number-at-least-twice-of-others/solutions/6453935/constant-space/
+// https://leetcode.com/problems/largest-number-at-least-twice-of-others/solutions/6453935/optimal-solution/
 
 function dominantIndex(nums: number[]) {
     const idx = nums.reduce((p, c, i) => i === 0 || c > nums[p] ? i : p, 0);

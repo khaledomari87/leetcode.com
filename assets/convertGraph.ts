@@ -22,3 +22,13 @@ export const toJson = (edges: [number, number][], isBidirect: boolean) => {
     }
     return output;
 };
+
+export const toArr = (n: number, edges: [number, number][]) => {
+    const arr = new Array<number[]>(n);
+    for (let i = 0; i < n; i++) arr[i] = [];
+    edges.forEach((pair, i) => {
+        arr[pair[0]].push(pair[1]);
+        arr[pair[1]].push(pair[0]);
+    });
+    return arr;
+};

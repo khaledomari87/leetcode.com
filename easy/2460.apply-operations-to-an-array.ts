@@ -7,7 +7,7 @@ function applyOperationsFilter(nums: number[]) {
             nums[i + 1] = 0;
         }
     }
-    const res = nums.filter((x) => x !== 0);
+    const res = nums.filter((x) => x);
     return res.concat(new Array<number>(nums.length - res.length).fill(0));
 }
 
@@ -19,7 +19,7 @@ function applyOperations(nums: number[]): number[] {
         }
     }
     for (let l = 0, r = 0; r < nums.length; r++) {
-        if (nums[r] !== 0) [nums[l++], nums[r]] = [nums[r], nums[l]];
+        if (nums[r]) [nums[l++], nums[r]] = [nums[r], nums[l]];
     }
     return nums;
 }

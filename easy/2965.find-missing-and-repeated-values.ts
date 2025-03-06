@@ -1,17 +1,17 @@
-// https://leetcode.com/problems/find-missing-and-repeated-values/solutions/6190671/linear-solution/
+// https://leetcode.com/problems/find-missing-and-repeated-values/solutions/6190671/math-and-map/
 
-function findMissingAndRepeatedValues(grid: number[][]): number[] {
-    const counter = grid.reduce((arr, row) => {
-        row.forEach((value) => {
-            arr[value - 1] ? arr[value - 1]++ : arr[value - 1] = 1;
-        });
-        return arr;
-    }, new Array<typeof grid[number][number]>(grid.length ** 2));
-
-    const output: number[] = new Array<number>(2);
-    for (let i = 0; i < counter.length; i++) {
-        if (counter[i] === 2) output[0] = i + 1;
-        else if (!counter[i]) output[1] = i + 1;
+function findMissingAndRepeatedValues(grid: number[][]) {
+    const n = grid.length, size = n ** 2, seen = new Array<boolean>(size);
+    let missing = size * (size + 1) / 2, repeated = Number.NaN;
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            if (seen[grid[i][j] - 1]) {
+                repeated = grid[i][j];
+            } else {
+                seen[grid[i][j] - 1] = true;
+                missing -= grid[i][j];
+            }
+        }
     }
-    return output;
+    return [repeated, missing];
 }

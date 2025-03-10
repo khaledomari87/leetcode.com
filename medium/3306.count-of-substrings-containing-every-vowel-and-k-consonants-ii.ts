@@ -8,8 +8,8 @@ function countOfSubstrings(word: string, k: number) {
             itemR !== undefined ? vowels.set(word[R], itemR + 1) : consonants += 1;
             while (Array.from(vowels.values()).every((c) => c > 0) && consonants >= k) {
                 res += word.length - R;
-                const vowelCountL = vowels.get(word[L]);
-                vowelCountL !== undefined ? vowels.set(word[L], vowelCountL - 1) : consonants--;
+                const itemL = vowels.get(word[L]);
+                itemL !== undefined ? vowels.set(word[L], itemL - 1) : consonants--;
                 L++;
             }
         }

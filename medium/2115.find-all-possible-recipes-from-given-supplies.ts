@@ -12,3 +12,12 @@ function findAllRecipes(recipes: string[], ings: string[][], supplies: string[])
     };
     return recipes.filter((r) => dfs(r));
 }
+
+function findAllRecipes2(recipes: string[], ings: string[][], supplies: string[]) {
+    const suppSet = new Set(supplies);
+    for (let len = suppSet.size - 1; len < suppSet.size;) {
+        len = suppSet.size;
+        recipes.forEach((r, i) => ings[i].every((ing) => suppSet.has(ing)) && suppSet.add(r));
+    }
+    return recipes.filter((r) => suppSet.has(r));
+}

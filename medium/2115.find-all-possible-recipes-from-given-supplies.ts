@@ -8,7 +8,7 @@ function findAllRecipes(recipes: string[], ings: string[][], supplies: string[])
         if (canMake.has(recp)) return true;
         const i = recpMap.get(recp);
         if (i === undefined || seen.has(recp)) return false;
-        return seen.add(recp) && Boolean(ings[i].every((ing) => dfs(ing)) && canMake.add(recp));
+        return Boolean(seen.add(recp) && ings[i].every((ing) => dfs(ing)) && canMake.add(recp));
     };
     return recipes.filter((r) => dfs(r));
 }

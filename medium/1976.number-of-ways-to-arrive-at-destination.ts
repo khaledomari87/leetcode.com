@@ -12,7 +12,7 @@ function countPaths(n: number, roads: [number, number, number][]) {
 
     const minDist = new Array(n).fill(Infinity), ways = new Array(n).fill(0);
     minDist[0] = 0, ways[0] = 1;
-    const minHeap = new Heap<[number, number]>((a, b) => a[0] - b[0], [[0, 0]])
+    const minHeap = new Heap<[number, number]>((a, b) => a[0] - b[0], [[0, 0]]);
     while (minHeap.size) {
         const [dist, node] = minHeap.dequeue()!;
         if (dist > minDist[node]) continue;

@@ -6,7 +6,7 @@ function countDays(days: number, meetings: [number, number][]) {
         if (start > prevEnd + 1) res += start - prevEnd - 1;
         prevEnd = Math.max(prevEnd, end);
         return res;
-    }, 0) + days - prevEnd;
+    }, days) - prevEnd;
 }
 
 function countDaysMerge(days: number, meetings: [number, number][]) {

@@ -11,3 +11,16 @@ function checkValidCuts(_n: number, rectangles: number[][]) {
         }
     });
 }
+
+function checkValidCuts2(_n: number, rectangles: number[][]) {
+    const x = rectangles.map((r) => [r[0], r[2]]).sort((a, b) => a[0] - b[0]);
+    const y = rectangles.map((r) => [r[1], r[3]]).sort((a, b) => a[0] - b[0]);
+    for (const intervals of [x, y]) {
+        let prevEnd = intervals[0][1], count = 0;
+        for (let i = 1; i < intervals.length; i++) {
+            if (prevEnd <= intervals[i][0] && ++count >= 2) return true;
+            prevEnd = Math.max(prevEnd, intervals[i][1]);
+        }
+    }
+    return false;
+}

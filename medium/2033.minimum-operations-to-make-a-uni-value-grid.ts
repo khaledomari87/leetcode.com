@@ -6,13 +6,7 @@ function minOperations(grid: number[][], x: number) {
             if (rem !== num % x) return -1;
         }
     }
-    const { abs, floor } = Math,
-        flat = grid.flat().sort((a, b) => a - b),
-        median = flat[floor(flat.length / 2)],
-        modX = median % x;
-    let res = 0;
-    for (const num of flat) {
-        res += floor(abs(median - num) / x);
-    }
-    return res;
+    const flat = grid.flat().sort((a, b) => a - b);
+    const median = flat[flat.length >>> 1];
+    return flat.reduce((r, v) => r + Math.floor(Math.abs(median - v) / x), 0);
 }

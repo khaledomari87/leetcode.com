@@ -8,7 +8,7 @@ function minimumIndex(nums: number[]) {
         }
     }
     count = nums.reduce((res, num) => res + +(num === x), 0);
-    if (count <= Math.ceil(nums.length / 2)) return -1;
+    if (count * 2 <= nums.length + 1) return -1;
 
     for (let i = 0, L = 0; i < nums.length; i++) {
         const R = count - (L += +(nums[i] === x));
@@ -16,5 +16,5 @@ function minimumIndex(nums: number[]) {
             return i;
         }
     }
-    return -1; // We'd never get here
+    return -2; // We'd never get here
 }

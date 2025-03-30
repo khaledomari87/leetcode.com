@@ -6,9 +6,9 @@ function partitionLabels(s: string) {
         lasts: number[] = new Array(26);
     for (let i = 0; i < s.length; i++) lasts[s.charCodeAt(i) - a] = i;
 
-    for (let i = 0, L = 0, R = 0; i < s.length; i++) {
-        if (i === (R = Math.max(R, lasts[s.charCodeAt(i) - a]))) {
-            res.push(R - L + 1), L = R + 1;
+    for (let i = 0, size = 1, last = 0; i < s.length; i++, size++) {
+        if (i === (last = Math.max(last, lasts[s.charCodeAt(i) - a]))) {
+            res.push(size), size = 0;
         }
     }
     return res;

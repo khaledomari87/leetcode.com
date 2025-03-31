@@ -1,4 +1,3 @@
-// deno-lint-ignore-file
 class Heap {
     constructor(comparator, arr = []) {
         this.heap = [];
@@ -9,9 +8,10 @@ class Heap {
         return this.heap.length;
     }
     bubbleUp() {
-        let idx = this.heap.length - 1, element = this.heap[idx];
+        let idx = this.heap.length - 1;
+        const element = this.heap[idx];
         while (idx > 0) {
-            let parentIdx = Math.floor((idx - 1) / 2), parent = this.heap[parentIdx];
+            const parentIdx = Math.floor((idx - 1) / 2), parent = this.heap[parentIdx];
             if (this.comparator(element, parent) >= 0) break;
             this.heap[parentIdx] = element;
             this.heap[idx] = parent;
@@ -19,9 +19,11 @@ class Heap {
         }
     }
     bubbleDown() {
-        let idx = 0, length = this.heap.length, element = this.heap[0];
+        let idx = 0;
+        const length = this.heap.length, element = this.heap[0];
         while (true) {
-            let leftChildIdx = 2 * idx + 1, rightChildIdx = 2 * idx + 2, swap = null;
+            const leftChildIdx = 2 * idx + 1, rightChildIdx = 2 * idx + 2;
+            let swap = null;
             if (leftChildIdx < length && this.comparator(this.heap[leftChildIdx], element) < 0) {
                 swap = leftChildIdx;
             }
@@ -58,7 +60,8 @@ class Heap {
         const siftDown = (index) => {
             const length = arr.length;
             while (true) {
-                const leftChildIdx = 2 * index + 1, rightChildIdx = 2 * index + 2, smallest = index;
+                const leftChildIdx = 2 * index + 1, rightChildIdx = 2 * index + 2;
+                let smallest = index;
                 if (leftChildIdx < length && comparator(arr[leftChildIdx], arr[smallest]) < 0) {
                     smallest = leftChildIdx;
                 }

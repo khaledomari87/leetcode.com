@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/put-marbles-in-bags/solutions/6598266/sort-and-greedy/
+// https://leetcode.com/problems/put-marbles-in-bags/solutions/6598266/two-solutions-sort-heap-and-greedy/
 
 import { Heap } from '../assets/Heap.ts';
 

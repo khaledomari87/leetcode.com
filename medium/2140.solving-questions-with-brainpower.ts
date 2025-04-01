@@ -16,12 +16,11 @@ function mostPoints(questions: [number, number][]) {
 }
 
 function mostPointsDP(questions: [number, number][]) {
-    const dp = new Array<number>(questions.length).fill(0);
+    const dp = new Array<number>(questions.length);
     dp[questions.length - 1] = questions.at(-1)![0];
     for (let i = questions.length - 2; i >= 0; i--) {
-        const skipped = questions[i][1] + i + 1;
-        if (skipped < questions.length) {
-            questions[i][0] += dp[skipped];
+        if (questions[i][1] + i + 1 < dp.length) {
+            questions[i][0] += dp[questions[i][1] + i + 1];
         }
         dp[i] = Math.max(questions[i][0], dp[i + 1]);
     }

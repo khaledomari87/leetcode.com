@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-i/solutions/6606709/greedy-and-prefix-sum/
+// https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-ii/solutions/6607832/greedy-and-prefix-sum/
 
 function maximumTripletValue(nums: number[], n = nums.length) {
     const leftMax: number[] = new Array(n).fill(0);

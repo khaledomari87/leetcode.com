@@ -2,9 +2,9 @@
 
 import type TreeNode from '../assets/TreeNode.ts';
 
-function lcaDeepestLeaves(root: TreeNode | null): typeof root {
+function lcaDeepestLeaves(root: TreeNode | null) {
     const res = { node: root, depth: 0 };
-    const dfs = (node: typeof root, depth: number): number => {
+    const dfs = (node: typeof root, depth: number) => {
         if (!node) return depth - 1;
         const left = dfs(node.left, depth + 1);
         const right = dfs(node.right, depth + 1);

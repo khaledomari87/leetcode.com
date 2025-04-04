@@ -3,18 +3,17 @@
 import type TreeNode from '../assets/TreeNode.ts';
 
 function lcaDeepestLeaves(root: TreeNode | null) {
-    const res = { node: root, depth: 0 };
     const dfs = (node: typeof root, depth: number) => {
-        if (!node) return depth - 1;
-        const left = dfs(node.left, depth + 1);
-        const right = dfs(node.right, depth + 1);
+        if (!node) return depth;
+        const left = dfs(node.left, ++depth);
+        const right = dfs(node.right, depth);
         const maxDepth = Math.max(left, right);
         if (left === right && maxDepth >= res.depth) {
-            res.depth = maxDepth;
-            res.node = node;
+            res.depth = maxDepth, res.node = node;
         }
         return maxDepth;
     };
+    const res = { node: root, depth: 0 };
     dfs(root, 0);
     return res.node;
 }

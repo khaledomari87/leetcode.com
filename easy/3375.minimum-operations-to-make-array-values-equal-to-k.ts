@@ -8,3 +8,6 @@ function minOperations(nums: number[], k: number): number {
     }
     return set.size - +set.has(k);
 }
+
+const minOperations2 = (nums: number[], k: number) =>
+    nums.some((n) => n < k) ? -1 : new Set(nums.filter((n) => n > k)).size;

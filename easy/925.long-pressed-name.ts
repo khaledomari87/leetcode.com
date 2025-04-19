@@ -1,11 +1,11 @@
 // https://leetcode.com/problems/long-pressed-name/solutions/6667689/two-pointers/
 
 function isLongPressedName(N: string, T: string) {
-    let n = 0, t = 0;
-    while (n < N.length && t < T.length) {
-        if (N[n] === T[t]) n++, t++;
-        else if (t >= 1 && T[t] === T[t - 1]) t++;
-        else return false;
+    if (N[0] !== T[0]) return false;
+    let n = 1;
+    for (let t = 1; n <= N.length && t < T.length; t++) {
+        if (N[n] === T[t]) n++;
+        else if (T[t] !== T[t - 1]) return false;
     }
-    return n === N.length && T.substring(t) === T[t - 1].repeat(T.length - t);
+    return n === N.length;
 }

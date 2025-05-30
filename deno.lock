@@ -1,3 +1,11 @@
 {
-  "version": "4"
+  "version": "4",
+  "specifiers": {
+    "npm:@datastructures-js/deque@*": "1.0.5"
+  },
+  "npm": {
+    "@datastructures-js/deque@1.0.5": {
+      "integrity": "sha512-ogeIkpcCGnM+LAZYZqXBXn6Nx0a/ikkKDFPoa1MzZWRFyEdfVUNwkHclET/T8jkyNM1dN6NmPDfenNKcKazjjg=="
+    }
+  }
 }

@@ -11,3 +11,12 @@ function divideString(s: string, k: number, x: string) {
     }
     return res;
 }
+
+function divideString2(s: string, k: number, x: string) {
+    const res: string[] = [], n = s.length;
+    for (let i = 0; i < n; i += k) {
+        res.push(s.slice(i, i + k));
+    }
+    res[res.length - 1] += x.repeat(k - res.at(-1)!.length);
+    return res;
+}

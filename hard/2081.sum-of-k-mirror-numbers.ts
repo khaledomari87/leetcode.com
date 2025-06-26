@@ -1,6 +1,6 @@
-// deno-fmt-ignore-file
 // https://leetcode.com/problems/sum-of-k-mirror-numbers/solutions/6875250/cheating/
 
+// deno-fmt-ignore-file
 const kMirror = (k: number, n: number) => [ // 2 <= k <= 9, 1 <= n <= 30
     [
         1, 4, 9, 16, 25, 58, 157, 470, 1055, 1772, 9219, 18228, 33579, 65802, 105795,

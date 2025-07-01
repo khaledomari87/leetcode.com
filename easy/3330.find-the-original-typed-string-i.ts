@@ -1,9 +1,13 @@
-// https://leetcode.com/problems/find-the-original-typed-string-i/solutions/6201061/very-simple-and-efficient/
+// https://leetcode.com/problems/find-the-original-typed-string-i/solutions/6201061/one-line/
 
 function possibleStringCount(word: string) {
-    let output = 1;
+    let res = 1;
     for (let i = 1; i < word.length; i++) {
-        output += +(word[i] === word[i - 1]);
+        res += +(word[i] === word[i - 1]);
     }
-    return output;
+    return res;
 }
+
+// deno-fmt-ignore
+const possibleStringCountOneLine = (word: string) => word.split('')
+    .reduce((r, s, i, a) => r + +(i && s === a[i - 1]), 1);

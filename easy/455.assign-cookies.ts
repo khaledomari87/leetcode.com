@@ -4,7 +4,7 @@ function findContentChildren(g: number[], s: number[]) {
     [g, s].forEach((a) => a.sort((a, b) => a - b));
     let res = 0;
     for (let j = 0; res < g.length && j < s.length; j++) {
-        g[res] <= s[j] && ++res;
+        res += +(g[res] <= s[j]);
     }
     return res;
 }

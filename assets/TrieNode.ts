@@ -14,6 +14,6 @@ export default class TrieNode {
     }
 
     hasCharAt = (s: string) => this.characters.has(s);
-    getCharAt = (s: string) => this._characters.get(s);
-    setCharAt = (s: string) => this._characters.set(s, new TrieNode()).get(s)!;
+    getCharAt = (s: string) => this.characters.get(s);
+    setCharAt = (s: string) => this.characters.set(s, new TrieNode()).get(s)!;
 }

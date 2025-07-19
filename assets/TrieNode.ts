@@ -1,4 +1,3 @@
-
 export default class TrieNode {
     private _isWord = false;
     private _characters: Map<string, TrieNode> = new Map<string, TrieNode>();

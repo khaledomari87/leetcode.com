@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/longest-substring-without-repeating-characters/
+// https://leetcode.com/problems/longest-substring-without-repeating-characters/solutions/5929622/typescript/
 
 function lengthOfLongestSubstring(s: string): number {
     let output = 0;

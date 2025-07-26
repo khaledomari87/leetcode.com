@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/longest-common-prefix/
+// https://leetcode.com/problems/longest-common-prefix/solutions/5891401/simple-efficient-and-readable/
 
 function longestCommonPrefix(strs: string[]): string {
     let prefix = '';

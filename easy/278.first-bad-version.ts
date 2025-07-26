@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/first-bad-version/
+// https://leetcode.com/problems/first-bad-version/solutions/5920671/simple-and-most-efficient-typescript-friendly/
 
 /**
  * The knows API is defined in the parent class Relation.

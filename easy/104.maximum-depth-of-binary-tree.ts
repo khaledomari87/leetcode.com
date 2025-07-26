@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximum-depth-of-binary-tree/
+// https://leetcode.com/problems/maximum-depth-of-binary-tree/solutions/5940260/one-line-of-typescript/
 
 import type TreeNode from '../assets/TreeNode.ts';
 

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/reverse-linked-list/
+// https://leetcode.com/problems/reverse-linked-list/solutions/5904608/typescript-friendly/
 
 /**
  * Definition for singly-linked list.

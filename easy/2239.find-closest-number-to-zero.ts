@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/find-closest-number-to-zero/
+// https://leetcode.com/problems/find-closest-number-to-zero/solutions/5888027/simple-efficient-and-readable/
 
 function findClosestNumberToZero(nums: number[]): number {
     let closest = nums[0];

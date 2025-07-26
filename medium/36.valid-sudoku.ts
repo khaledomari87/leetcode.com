@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/valid-sudoku/
+// https://leetcode.com/problems/valid-sudoku/solutions/5904076/looping-over-the-matrix-once-only-check-the-sub-boxes-formulas/
 
 const isValidSudokuSequence = (arr: string[]) => {
     const seen = new Set<string>();

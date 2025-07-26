@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximum-average-subarray-i/
+// https://leetcode.com/problems/maximum-average-subarray-i/solutions/5926732/simple-and-most-efficient/
 
 function findMaxAverage(nums: number[], k: number): number {
     let maxAvg = 0;

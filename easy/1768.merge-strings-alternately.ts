@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/merge-strings-alternately/
+// https://leetcode.com/problems/merge-strings-alternately/solutions/5888008/simple-linear-and-readable/
 
 function mergeAlternately(word1: string, word2: string): string {
     let result = '';

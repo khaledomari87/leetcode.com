@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array/solutions/5968181/simple-and-fastest-solution/
 
 function removeDuplicates(nums: number[]): number {
     let L = 1;

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/minimum-absolute-difference-in-bst/
+// https://leetcode.com/problems/minimum-absolute-difference-in-bst/solutions/5951280/simple-and-efficient-dfs/
 
 import type TreeNode from '../assets/TreeNode.ts';
 

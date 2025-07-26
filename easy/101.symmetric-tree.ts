@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/symmetric-tree/
+// https://leetcode.com/problems/symmetric-tree/solutions/5941236/shortest-and-most-efficient/
 
 import type TreeNode from '../assets/TreeNode.ts';
 

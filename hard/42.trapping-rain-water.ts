@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/trapping-rain-water/
+// https://leetcode.com/problems/trapping-rain-water/solutions/5911544/simple-and-efficient/
 
 function trap(height: number[]): number {
     const length = height.length;

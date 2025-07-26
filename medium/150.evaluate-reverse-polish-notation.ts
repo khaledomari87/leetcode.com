@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/evaluate-reverse-polish-notation/
+// https://leetcode.com/problems/evaluate-reverse-polish-notation/solutions/5914610/ts-friendly/
 
 function evalRPN(tokens: string[]): number {
     const stack = new Array<number>();

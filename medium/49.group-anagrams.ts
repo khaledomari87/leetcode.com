@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/group-anagrams/
+// https://leetcode.com/problems/group-anagrams/solutions/5906562/simple-efficient-and-readable/
 
 function groupAnagrams(strs: string[]): string[][] {
     const map = new Map<typeof strs[0], typeof strs>();

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/longest-consecutive-sequence/
+// https://leetcode.com/problems/longest-consecutive-sequence/solutions/5906735/fastest-solution-using-a-set/
 
 function longestConsecutive(nums: number[]): number {
     const set = new Set(nums);

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/is-subsequence/
+// https://leetcode.com/problems/is-subsequence/solutions/5891141/simple-efficient-and-readable/
 
 function isSubsequence(s: string, t: string): boolean {
     let sp = 0; // s pointer

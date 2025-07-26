@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/spiral-matrix/
+// https://leetcode.com/problems/spiral-matrix/solutions/5896386/typescript-switch-cases-less-than-60-lines/
 
 function spiralOrder(matrix: number[][]): number[] {
     let direction: 'right' | 'down' | 'left' | 'up' = 'right',

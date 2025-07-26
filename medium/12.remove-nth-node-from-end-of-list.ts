@@ -1,13 +1,6 @@
-// https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+// https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutions/5917623/efficient-and-typescript-friendly/
 
-class ListNode {
-    val: number;
-    next: ListNode | null;
-    constructor(val?: number, next?: ListNode | null) {
-        this.val = val === undefined ? 0 : val;
-        this.next = next === undefined ? null : next;
-    }
-}
+import { ListNode } from '../assets/linkedlist.ts';
 
 function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
     let right = head;

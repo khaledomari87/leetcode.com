@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+// https://leetcode.com/problems/letter-combinations-of-a-phone-number/solutions/6006074/most-efficient-solution/
 
 function letterCombinations(digits: string): string[] {
     if (!digits) return [];

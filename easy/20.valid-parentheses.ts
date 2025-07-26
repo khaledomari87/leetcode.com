@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/valid-parentheses/
+// https://leetcode.com/problems/valid-parentheses/solutions/5913402/simple-and-efficient-using-a-stack/
 
 function isValid(s: string): boolean {
     const map = new Map([[')', '('], [']', '['], ['}', '{']]);

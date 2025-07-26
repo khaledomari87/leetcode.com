@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/valid-palindrome/
+// https://leetcode.com/problems/valid-palindrome/solutions/5907483/simple-efficient-and-readable/
 
 function isPalindrome(s: string): boolean {
     const isToSkip = (char: string): boolean => (char < 'A' || char > 'Z') && (char < '0' || char > '9');

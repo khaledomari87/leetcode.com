@@ -1,4 +1,5 @@
-// https://leetcode.com/problems/climbing-stairs/
+// https://leetcode.com/problems/climbing-stairs/solutions/5987892/only-3-lines-most-efficient-solution/
+// https://leetcode.com/problems/climbing-stairs/solutions/5987912/constant-time-o-1-using-the-golden-ratio/
 
 function climbStairs(n: number): number {
     let output = 1;

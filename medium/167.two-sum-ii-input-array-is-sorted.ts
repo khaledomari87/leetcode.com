@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+// https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/solutions/5907362/simple-efficient-and-readable/
 
 function twoSum(numbers: number[], target: number): number[] {
     let left = 0,

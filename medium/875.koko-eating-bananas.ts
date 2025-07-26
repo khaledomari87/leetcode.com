@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/koko-eating-bananas/
+// https://leetcode.com/problems/koko-eating-bananas/solutions/5929593/typescript/
 
 function minEatingSpeed(piles: number[], h: number): number {
     let minK = piles.reduce((prev, curr) => Math.max(prev, curr), Number.NEGATIVE_INFINITY), // max pile

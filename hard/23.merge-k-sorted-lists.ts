@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/merge-k-sorted-lists/
+// https://leetcode.com/problems/merge-k-sorted-lists/solutions/5971611/efficient-solution-using-min-heap/
 
 import { Heap } from '../assets/Heap.ts';
 import { ListNode } from '../assets/linkedlist.ts';

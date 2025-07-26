@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/squares-of-a-sorted-array/
+// https://leetcode.com/problems/squares-of-a-sorted-array/solutions/5907106/short-and-efficient/
 
 function sortedSquares(nums: number[]): number[] {
     const output = new Array(nums.length);

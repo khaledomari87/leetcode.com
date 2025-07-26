@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/path-sum/
+// https://leetcode.com/problems/path-sum/solutions/5946720/one-line-and-fastest-solution/
 
 import type TreeNode from '../assets/TreeNode.ts';
 

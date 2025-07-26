@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/valid-perfect-square/
+// https://leetcode.com/problems/valid-perfect-square/solutions/5920841/fastest-solution/
 
 function isPerfectSquare(num: number): boolean {
     let left = 1, right = Math.ceil(num / 2);

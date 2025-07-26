@@ -1,6 +1,6 @@
-// https://leetcode.com/problems/minimum-size-subarray-sum/
+// https://leetcode.com/problems/minimum-size-subarray-sum/solutions/5939002/simple-and-efficient/
 
-function minSubArrayLen(target: number, nums: number[]): number {
+function minSubArrayLen(target: number, nums: number[]) {
     let output = Number.POSITIVE_INFINITY;
     let sum = 0;
     for (let L = 0, R = 0; R < nums.length; R++) {

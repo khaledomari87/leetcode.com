@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/contains-duplicate/
+// https://leetcode.com/problems/contains-duplicate/solutions/5900812/simple-efficient-and-readable/
 
 function containsDuplicate(nums: number[]): boolean {
     // return new Set(nums).size !== nums.length; // Below solution is more efficient

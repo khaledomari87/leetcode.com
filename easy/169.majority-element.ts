@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/majority-element/
+// https://leetcode.com/problems/majority-element/solutions/5906393/simple-efficient-and-readable/
 
 function majorityElement(nums: number[]): number {
     let output: number = nums[0];

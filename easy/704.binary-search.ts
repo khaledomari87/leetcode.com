@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/binary-search/
+// https://leetcode.com/problems/binary-search/solutions/5920236/binary-search/
 
 function search(nums: number[], target: number): number {
     let L = 0, R = nums.length - 1;

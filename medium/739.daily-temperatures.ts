@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/daily-temperatures/
+// https://leetcode.com/problems/daily-temperatures/solutions/7008756/stack/
 
 function dailyTemperatures(temperatures: number[]): number[] {
     const history = new Array<number>();

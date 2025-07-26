@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/product-of-array-except-self/
+// https://leetcode.com/problems/product-of-array-except-self/solutions/5894793/optimum-solution-typescript/
 
 function productExceptSelf(nums: number[]): number[] {
     const output = new Array(nums.length);

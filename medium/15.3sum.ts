@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/3sum/
+// https://leetcode.com/problems/3sum/solutions/5910771/sort-with-two-pointers-simple-and-readable-typescript/
 
 function threeSum(nums: number[], target = 0): number[][] {
     const output = new Array<typeof nums>();

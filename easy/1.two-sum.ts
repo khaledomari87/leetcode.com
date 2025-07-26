@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/two-sum/
+// https://leetcode.com/problems/two-sum/solutions/5903072/short-and-efficient-using-map/
 
 function twoSum(nums: number[], target: number): number[] {
     const map = new Map<number, number>();

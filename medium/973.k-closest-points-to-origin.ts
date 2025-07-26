@@ -1,8 +1,8 @@
-// https://leetcode.com/problems/k-closest-points-to-origin/
+// https://leetcode.com/problems/k-closest-points-to-origin/solutions/5970324/fastest-solution-using-maxheap-time-n-log-k-space-k/
 
 import { Heap } from '../assets/Heap.ts';
 
-function kClosest(points: [number, number][], k: number): number[][] {
+function kClosest(points: [number, number][], k: number) {
     const maxHeap = new Heap<{ dis: number; p: typeof points[number] }>((a, b) => b.dis - a.dis);
 
     for (const p of points) {
@@ -13,5 +13,3 @@ function kClosest(points: [number, number][], k: number): number[][] {
     }
     return maxHeap.toArray().map((v) => v.p);
 }
-
-console.log(...kClosest([[3, 3], [5, -1], [-2, 4]], 2));

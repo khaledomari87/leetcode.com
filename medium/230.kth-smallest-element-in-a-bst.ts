@@ -1,8 +1,8 @@
-// https://leetcode.com/problems/kth-smallest-element-in-a-bst/
+// https://leetcode.com/problems/kth-smallest-element-in-a-bst/solutions/5951403/simple-and-efficient-dfs/
 
 import type TreeNode from '../assets/TreeNode.ts';
 
-function kthSmallest(root: TreeNode, k: number): number {
+function kthSmallest(root: TreeNode, k: number) {
     let output = Number.POSITIVE_INFINITY;
     const dfs = (node: TreeNode | null) => {
         if (!node) return;

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/search-in-rotated-sorted-array/
+// https://leetcode.com/problems/search-in-rotated-sorted-array/solutions/5923708/simple-by-binary-search-the-array-twice/
 
 function search(nums: number[], target: number): number {
     let L = 0, R = nums.length - 1;

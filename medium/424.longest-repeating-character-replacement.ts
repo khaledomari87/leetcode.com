@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/longest-repeating-character-replacement/
+// https://leetcode.com/problems/longest-repeating-character-replacement/solutions/5938897/efficient-and-clean-typescript/
 
 function characterReplacement(s: string, k: number): number {
     const ascii = (char: string) => char.charCodeAt(0);

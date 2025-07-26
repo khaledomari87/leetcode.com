@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/permutations/
+// https://leetcode.com/problems/permutations/solutions/5987395/o-n-recursive-backtracking/
 
 function permute(nums: number[]): number[][] {
     const output = new Array<number[]>();

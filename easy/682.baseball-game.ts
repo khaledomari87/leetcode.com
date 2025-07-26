@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/baseball-game/
+// https://leetcode.com/problems/baseball-game/solutions/5913045/simple-and-ts-friendly/
 
 function calPoints(operations: string[]): number {
     const stack = new Array<string | number>();

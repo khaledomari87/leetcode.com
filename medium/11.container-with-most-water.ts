@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/container-with-most-water/
+// https://leetcode.com/problems/container-with-most-water/solutions/5911298/short-and-efficient/
 
 function maxArea(height: number[]): number {
     let left = 0,

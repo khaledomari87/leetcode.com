@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/max-consecutive-ones-iii/
+// https://leetcode.com/problems/max-consecutive-ones-iii/solutions/5929605/typescript/
 
 function longestOnes(nums: number[], allowance: number): number {
     let output = 0;

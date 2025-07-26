@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/invert-binary-tree/
+// https://leetcode.com/problems/invert-binary-tree/solutions/5940214/typescript/
 
 import type TreeNode from '../assets/TreeNode.ts';
 

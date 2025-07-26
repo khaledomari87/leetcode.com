@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/search-insert-position/
+// https://leetcode.com/problems/search-insert-position/solutions/5920531/efficient-binary-search/
 
 function searchInsert(nums: number[], target: number): number {
     let L = 0, R = nums.length - 1;

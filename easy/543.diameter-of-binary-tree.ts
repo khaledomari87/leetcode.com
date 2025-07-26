@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/diameter-of-binary-tree/
+// https://leetcode.com/problems/diameter-of-binary-tree/solutions/5941173/simple-and-efficient/
 
 import type TreeNode from '../assets/TreeNode.ts';
 

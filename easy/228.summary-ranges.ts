@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/summary-ranges/
+// https://leetcode.com/problems/summary-ranges/solutions/5891855/efficient-and-readable/
 
 function summaryRanges(nums: number[]): string[] {
     const result = new Array<string>();

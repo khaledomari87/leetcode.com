@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/subtree-of-another-tree/
+// https://leetcode.com/problems/subtree-of-another-tree/solutions/5947160/efficient-and-two-lines/
 
 import type TreeNode from '../assets/TreeNode.ts';
 

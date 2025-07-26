@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/combination-sum/
+// https://leetcode.com/problems/combination-sum/solutions/6005516/fastest-solution-less-than-3ms/
 
 function combinationSum(cands: number[], grandTarget: number): number[][] {
     const n = cands.length;
@@ -14,5 +14,3 @@ function combinationSum(cands: number[], grandTarget: number): number[][] {
     for (let i = 0; i < n; i++) rbt(i, grandTarget);
     return output;
 }
-
-// console.log(`(${combinationSum([2,3,5], 8).join('),(')})`);

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/copy-list-with-random-pointer/
+// https://leetcode.com/problems/copy-list-with-random-pointer/solutions/5920042/simple-and-efficient-space-complexity-o-n/
 
 class _Node {
     val: number;

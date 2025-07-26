@@ -1,13 +1,6 @@
-// https://leetcode.com/problems/middle-of-the-linked-list/
+// https://leetcode.com/problems/middle-of-the-linked-list/solutions/5916602/simplest-solution-slow-fast-pointers/
 
-class ListNode {
-    val: number;
-    next: ListNode | null;
-    constructor(val?: number, next?: ListNode | null) {
-        this.val = val === undefined ? 0 : val;
-        this.next = next === undefined ? null : next;
-    }
-}
+import { ListNode } from '../assets/linkedlist.ts';
 
 function middleNode(head: ListNode | null): ListNode | null {
     let slow = head!;

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/subsets/
+// https://leetcode.com/problems/subsets/solutions/5975466/efficient-solution-using-backtracking/
 
 function subsets(nums: number[]): number[][] {
     const output = new Array<number[]>();

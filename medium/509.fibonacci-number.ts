@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/fibonacci-number/
+// https://leetcode.com/problems/fibonacci-number/solutions/5987682/o-1-time-complexity-using-the-golden-ratio/
 
 function fib(n: number): number {
     const goldenRatio = 1.618034; // (1 + Math.sqrt(5)) / 2

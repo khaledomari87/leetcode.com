@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/combinations/
+// https://leetcode.com/problems/combinations/solutions/6001897/efficient-solution-backtracking/
 
 function combine(n: number, k: number): number[][] {
     const output = new Array<number[]>();
@@ -14,4 +14,3 @@ function combine(n: number, k: number): number[][] {
     recursiveBT(1);
     return output;
 }
-// console.log(`(${combine(10, 2).join('),(')})`);

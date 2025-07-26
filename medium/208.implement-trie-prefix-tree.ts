@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/implement-trie-prefix-tree/
+// https://leetcode.com/problems/implement-trie-prefix-tree/solutions/5956141/clean-typescript-and-efficient/
 
 import TrieNode from '../assets/TrieNode.ts';
 

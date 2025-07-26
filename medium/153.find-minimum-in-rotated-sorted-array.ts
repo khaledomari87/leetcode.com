@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+// https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solutions/5921878/shortest-solution/
 
 function findMin(nums: number[]): number {
     let L = 0, R = nums.length - 1;

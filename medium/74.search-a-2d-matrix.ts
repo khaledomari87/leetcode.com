@@ -1,6 +1,6 @@
-// https://leetcode.com/problems/search-a-2d-matrix/
+// https://leetcode.com/problems/search-a-2d-matrix/solutions/5921090/simple-and-efficient/
 
-function searchMatrix(matrix: number[][], target: number): boolean {
+function searchMatrix(matrix: number[][], target: number) {
     const colsLength = matrix[0].length;
     let L = 0, R = matrix.length * colsLength - 1;
     while (L <= R) {

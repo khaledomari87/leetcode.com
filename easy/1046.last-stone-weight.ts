@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/last-stone-weight/
+// https://leetcode.com/problems/last-stone-weight/solutions/5961978/simple-and-efficient-using-maxpriorityqueue/
 
 import { Heap } from '../assets/Heap.ts';
 

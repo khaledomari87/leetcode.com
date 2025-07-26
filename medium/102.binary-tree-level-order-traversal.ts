@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/binary-tree-level-order-traversal/
+// https://leetcode.com/problems/binary-tree-level-order-traversal/solutions/5948690/fastest-solution-using-hash/
 
 import type TreeNode from '../assets/TreeNode.ts';
 

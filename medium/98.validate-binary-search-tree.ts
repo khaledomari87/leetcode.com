@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/validate-binary-search-tree/
+// https://leetcode.com/problems/validate-binary-search-tree/solutions/5952212/efficient-and-simple-one-line/
 
 import type TreeNode from '../assets/TreeNode.ts';
 

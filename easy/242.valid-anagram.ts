@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/valid-anagram/
+// https://leetcode.com/problems/valid-anagram/solutions/5900854/simple-and-efficient/
 
 function isAnagram(s: string, t: string): boolean {
     const map = new Map<string, number>();

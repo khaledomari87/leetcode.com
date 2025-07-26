@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/missing-number/
+// https://leetcode.com/problems/missing-number/solutions/6220369/most-efficient-solution/
 
 const missingNumber = (nums: number[]) =>
     nums.reduce(

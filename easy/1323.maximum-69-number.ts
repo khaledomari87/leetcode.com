@@ -10,3 +10,18 @@ function maximum69NumberTraversal(n: number) {
     }
     return n;
 }
+
+function maximum69NumberWithoutString(n: number) {
+    let res = 0, p = 0, pos = -Infinity;
+    while (n) {
+        if (n % 10 === 6) {
+            res += 6 * 10 ** pos;
+            pos = p;
+        } else {
+            res += n % 10 * 10 ** p;
+        }
+        n = Math.floor(n / 10);
+        p++;
+    }
+    return res + 9 * 10 ** pos;
+}

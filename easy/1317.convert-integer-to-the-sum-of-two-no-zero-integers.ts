@@ -2,5 +2,6 @@
 
 function getNoZeroIntegers(n: number, m = 0) {
     while ([++m, --n].some((v) => `${v}`.includes('0')));
+    // while (`${++m}${--n}`.includes('0'));
     return [m, n];
 }

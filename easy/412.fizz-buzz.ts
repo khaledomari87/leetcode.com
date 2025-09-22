@@ -1,10 +1,6 @@
-// https://leetcode.com/problems/fizz-buzz/solutions/6218344/simple/
+// https://leetcode.com/problems/fizz-buzz/solutions/6218344/one-line/
 
-function fizzBuzz(n: number): string[] {
-    const output = new Array<string>(n);
-    for (let i = 1; i <= n; i++) {
-        if (i % 3 !== 0 && i % 5 !== 0) output[i - 1] = i.toString();
-        else output[i - 1] = `${i % 3 === 0 ? 'Fizz' : ''}${i % 5 === 0 ? 'Buzz' : ''}`;
-    }
-    return output;
-}
+// deno-fmt-ignore
+const fizzBuzz = (n: number) => Array.from({ length: n }, (_, i) =>
+    'Fizz'.repeat(+!(++i % 3)) + 'Buzz'.repeat(+!(i % 5)) || `${i}`
+);

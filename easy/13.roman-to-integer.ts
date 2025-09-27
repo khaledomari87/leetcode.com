@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/roman-to-integer/solutions/5888137/simple-and-efficient/
 
-function romanToInt(s: string): number {
-    const mapper: { [key: string]: number } = {
+function romanToInt(s: string) {
+    const map: { [key: string]: number } = {
         'I': 1,
         'V': 5,
         'X': 10,
@@ -10,13 +10,10 @@ function romanToInt(s: string): number {
         'D': 500,
         'M': 1000,
     } as const;
-
-    let previous = mapper[s[s.length - 1]];
-    let result = previous;
+    let prev = map[s[s.length - 1]], res = prev;
     for (let i = s.length - 2; i >= 0; i--) {
-        const current = mapper[s[i]];
-        result += previous > current ? -current : current;
-        previous = current;
+        res += (prev > map[s[i]] ? -1 : 1) * map[s[i]];
+        prev = map[s[i]];
     }
-    return result;
+    return res;
 }

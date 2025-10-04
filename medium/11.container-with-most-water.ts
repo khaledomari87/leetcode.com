@@ -1,15 +1,14 @@
-// https://leetcode.com/problems/container-with-most-water/solutions/5911298/short-and-efficient/
+// https://leetcode.com/problems/container-with-most-water/solutions/7247249/greedy-two-pointers-with-comments/
 
-function maxArea(height: number[]): number {
-    let left = 0,
-        right = height.length - 1,
-        output = 0;
-    while (left < right) {
-        output = Math.max(
-            output,
-            Math.min(height[left], height[right]) * (right - left),
-        );
-        height[left] > height[right] ? right-- : left++;
+// deno-fmt-ignore
+function maxArea(H: number[]) {
+    const { min, max } = Math, n = H.length;
+    let res = 0, l = 0, r = n - 1; // set l & r pointers
+    while (l < r) {                // area = 0 when l = r
+        const x = r - l;           // x-axis length
+        const y = min(H[l], H[r]); // y-axis length
+        res = max(res, x * y);     // new area = x * y
+        H[l] > H[r] ? r-- : l++;   // move lowest pointer
     }
-    return output;
+    return res;
 }

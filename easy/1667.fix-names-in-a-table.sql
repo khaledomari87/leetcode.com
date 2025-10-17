@@ -14,14 +14,14 @@ SELECT
 FROM Users
 ORDER by user_id;
 
---MSSQL
+-- MSSQL
 SELECT
     user_id,
     UPPER(LEFT(name, 1)) + LOWER(SUBSTRING(name, 2, LEN(name))) AS name
 FROM Users
 ORDER by user_id;
 
---OracleSQL
+-- Oracle
 SELECT
     user_id,
     UPPER(SUBSTR(name, 1, 1)) || LOWER(SUBSTR(name, 2)) AS name

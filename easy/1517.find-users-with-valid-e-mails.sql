@@ -1,6 +1,6 @@
 -- https://leetcode.com/problems/find-users-with-valid-e-mails/solutions/7013238/universal-query/
 
--- Postgres
+-- PostgreSQL
 SELECT *
 FROM Users
 WHERE mail ~ '^[a-zA-Z][a-zA-Z0-9\.\-_]*@leetcode\.com$';

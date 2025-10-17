@@ -32,7 +32,7 @@ SELECT
 FROM Employees
 ORDER BY employee_id
 
--- OracleSQL
+-- Oracle
 SELECT
     employee_id,
     CASE

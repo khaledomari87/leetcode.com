@@ -1,6 +1,6 @@
 -- https://leetcode.com/problems/customer-placing-the-largest-number-of-orders/solutions/6140355/simplest-solution-group-by-order-by-count-desc/
 
--- Postgres and MySQL
+-- PostgreSQL and MySQL
 SELECT customer_number
 FROM Orders
 GROUP BY customer_number

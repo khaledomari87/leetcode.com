@@ -30,7 +30,7 @@ FROM (
 GROUP BY sell_date
 ORDER BY sell_date;
 
--- OracleSQL
+-- Oracle
 SELECT
     TO_CHAR(sell_date, 'YYYY-MM-DD') AS sell_date,
     COUNT(DISTINCT product) AS num_sold,

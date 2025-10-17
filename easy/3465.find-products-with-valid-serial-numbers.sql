@@ -20,7 +20,7 @@ WHERE ' ' + description + ' ' COLLATE Latin1_General_CS_AS
 ORDER BY product_id;
 
 
--- OracleSQL
+-- Oracle
 SELECT *
 FROM products
 WHERE REGEXP_LIKE(description,'((^SN| SN)[0-9]{4}-[0-9]{4}( |$))','c')

@@ -1,6 +1,6 @@
 -- https://leetcode.com/problems/rising-temperature/solutions/6269966/simplest-solution/
 
--- Oracle / Postgres
+-- Oracle / PostgreSQL
 SELECT w.id
 FROM Weather w
 INNER JOIN Weather prev on

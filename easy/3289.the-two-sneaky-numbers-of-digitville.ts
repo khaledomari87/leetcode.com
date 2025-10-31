@@ -1,13 +1,14 @@
 // https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville/solutions/6201114/hash-set/
 
-function getSneakyNumbers(nums: number[]): number[] {
-    for (let i = 0, first: number | undefined, seen = new Set<number>(); i < nums.length; i++) {
-        if (seen.has(nums[i])) {
-            if (first !== undefined) return [first, nums[i]];
-            first = nums[i];
+function getSneakyNumbers(nums: number[]) {
+    const res: number[] = [], seen = new Set<number>();
+    for (const num of nums) {
+        if (seen.has(num)) {
+            res.push(num);
+            if (res.length === 2) break;
         } else {
-            seen.add(nums[i]);
+            seen.add(num);
         }
     }
-    throw new Error('Invalid input!');
+    return res;
 }

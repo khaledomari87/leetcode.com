@@ -5,7 +5,7 @@ SELECT tweet_id
 FROM Tweets
 WHERE LENGTH(content) > 15;
 
--- MS-SQL
+-- MSSQL
 SELECT tweet_id
 FROM Tweets
 WHERE LEN(content) > 15;

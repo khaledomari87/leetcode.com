@@ -2,14 +2,9 @@
 
 import { toMap } from '../assets/convertGraph.ts';
 
-const maxKDivisibleComponents = (
-    n: number,
-    edges: [number, number][],
-    values: number[],
-    k: number,
-): number => {
+function maxKDivisibleComponents(n: number, edges: [number, number][], values: number[], k: number) {
     const map = toMap(edges, true);
-    let output = 0;
+    let res = 0;
     const dfs = (node: number, parent: number) => {
         let total = values[node];
         map.get(node)?.forEach((child) => {
@@ -17,9 +12,9 @@ const maxKDivisibleComponents = (
                 total += dfs(child, node);
             }
         });
-        (total % k === 0) && output++;
+        res += +(total % k === 0);
         return total;
     };
     dfs(0, -1);
-    return output;
-};
+    return res;
+}

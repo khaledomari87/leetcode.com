@@ -1,4 +1,7 @@
 {
+    "tasks": {
+        "kill": "lsof -t -i :9229 | xargs kill -9"
+    },
     "imports": {
     },
     "fmt": {

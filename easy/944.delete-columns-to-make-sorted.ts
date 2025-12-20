@@ -12,3 +12,7 @@ function minDeletionSize(strs: string[]) {
     }
     return res;
 }
+
+// deno-fmt-ignore
+const minDeletionSizeOneLine = (s: string[]) => s[0].split('').reduce(
+    (r, _, i) => r + +s.some((_, j) => j > 0 && s[j - 1][i] > s[j][i]), 0);

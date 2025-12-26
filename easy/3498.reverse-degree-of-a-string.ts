@@ -8,3 +8,7 @@ function reverseDegree(s: string) {
     }
     return res;
 }
+
+// deno-fmt-ignore
+const reverseDegreeOneLine = (s: string) => s.split('').reduce((r, c, i) =>
+    r + (97 - c.charCodeAt(0)) * (i + 1), 13 * s.length * (s.length + 1));

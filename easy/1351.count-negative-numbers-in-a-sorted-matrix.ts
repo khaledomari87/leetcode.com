@@ -8,3 +8,14 @@ function countNegatives(grid: number[][]) {
     }
     return res;
 }
+
+function countNegatives2(grid: number[][]) {
+    return grid.reduce((res, row) => {
+        let l = 0, r = row.length - 1, pos = row.length;
+        while (l <= r) {
+            const m = (l + r) >> 1;
+            row[m] < 0 ? (pos = m, r = m - 1) : l = m + 1;
+        }
+        return res + row.length - pos;
+    }, 0);
+}

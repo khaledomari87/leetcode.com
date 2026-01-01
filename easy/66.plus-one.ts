@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/plus-one/solutions/6218448/simple-and-readable/
 
-function plusOne(digits: number[]): number[] {
+function plusOne(digits: number[]) {
     let i = digits.length - 1;
     digits[i]++;
     while (digits[i] > 9 && i > 0) {
@@ -13,3 +13,7 @@ function plusOne(digits: number[]): number[] {
     }
     return digits;
 }
+
+const plusOneBigInt = (digits: number[], plus = 1) =>
+    String(BigInt(digits.join('')) + BigInt(plus))
+        .split('').map((v) => +v);

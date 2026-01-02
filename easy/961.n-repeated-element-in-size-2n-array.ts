@@ -8,3 +8,8 @@ function repeatedNTimes(nums: number[]) {
     }
     throw new Error('Invalid Input!');
 }
+
+function repeatedNTimes2(nums: number[]) {
+    if (nums.length == 4 && nums[0] == nums[3]) return nums[0];
+    return nums.find((n, i, a) => --i > 0 && a[i] === n || a[--i] === n)!;
+}

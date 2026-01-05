@@ -1,16 +1,9 @@
-// https://leetcode.com/problems/maximum-matrix-sum/solutions/6079197/optimum-solution/
+// https://leetcode.com/problems/maximum-matrix-sum/solutions/7467726/greedy-constant-space/
 
-function maxMatrixSum(matrix: number[][]): number {
-    let sum = 0;
-    let min = Number.POSITIVE_INFINITY;
-    let count = 0;
-    matrix.forEach((row) =>
-        row.forEach((num) => {
-            num < 0 && count++;
-            const abs = Math.abs(num);
-            sum += abs;
-            min = Math.min(min, abs);
-        })
-    );
-    return sum - 2 * min * (count % 2);
+function maxMatrixSum(mat: number[][]) {
+    const { min, abs } = Math;
+    const sum = mat.reduce((s, r) => r.reduce((a, b) => a + abs(b), s), 0);
+    const mn = mat.reduce((m, r) => r.reduce((a, b) => min(a, abs(b)), m), Infinity);
+    const cnt = mat.reduce((c, r) => r.reduce((a, b) => a + +(b < 0), c), 0);
+    return sum - 2 * mn * (cnt % 2);
 }

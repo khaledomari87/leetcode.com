@@ -1,16 +1,11 @@
-// https://leetcode.com/problems/two-sum/solutions/5903072/short-and-efficient-using-map/
+// https://leetcode.com/problems/two-sum/solutions/7544893/one-pass/
 
-function twoSum(nums: number[], target: number): number[] {
-    const map = new Map<number, number>();
-    nums.forEach((value, index) => map.set(value, index));
-    // this is slower and consumes more memory:
-    // const map = new Map<number, number>(nums.map((value, index) => [value, index]));
-
-    for (let arrIndex = 0; arrIndex < nums.length; arrIndex++) {
-        const candidateIndex = map.get(target - nums[arrIndex]);
-        if (candidateIndex !== undefined && arrIndex !== candidateIndex) {
-            return [arrIndex, candidateIndex];
-        }
+function twoSum(nums: number[], target: number) {
+    const m = new Map<number, number>();
+    for (let i = 0, n = nums.length; i < n; i++) {
+        const item = m.get(target - nums[i]);
+        if (item !== undefined) return [i, item];
+        m.set(nums[i], i);
     }
-    return []; // We should never get here
+    return [];
 }

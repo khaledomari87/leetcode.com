@@ -12,3 +12,15 @@ const addBinary2 = (a: string, b: string) => {
     }
     return indexOf1 >= 0 && res.join('').substring(indexOf1) || '0';
 };
+
+function addBinary3(a: string, b: string) {
+    const res: number[] = [];
+    let carry = 0;
+    for (let n = Math.max(a.length, b.length) + 1, i = -1; i > -n; i--) {
+        const d = +(a.at(i) || 0) + +(b.at(i) || 0) + carry;
+        carry = +(d > 1);
+        res.push(d % 2);
+    }
+    if (carry) res.push(carry);
+    return res.reverse().join('');
+}

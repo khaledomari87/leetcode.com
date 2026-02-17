@@ -1,5 +1,3 @@
-export default function countOnes(num: number) {
-    let count = 0;
-    for (const b of num.toString(2)) count += +(b === '1');
-    return count;
-}
+const countOnes = (n: number) => n.toString(2).split('').reduce((r, b) => r + +b, 0);
+
+export default countOnes;

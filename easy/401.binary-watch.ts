@@ -2,7 +2,7 @@
 
 import countOnes from '../assets/countOnes.ts';
 
-function readBinaryWatch(turnedOn: number): string[] {
+function readBinaryWatch(turnedOn: number) {
     const res: string[] = [];
     for (let h = 0; h < 12; h++) {
         for (let m = 0; m < 60; m++) {

@@ -1,6 +1,6 @@
 -- https://leetcode.com/problems/fix-names-in-a-table/solutions/7118142/sql-queries-for-all-servers/
 
---MySQL
+-- MySQL
 SELECT
     user_id,
     CONCAT(UPPER(SUBSTRING(name, 1, 1)), LOWER(SUBSTRING(name, 2))) AS name

@@ -7,3 +7,11 @@ function binaryGap(n: number) {
     }
     return res;
 }
+
+function binaryGap2(n: number) {
+    let res = 0;
+    for (let l = Infinity, r = 0; n; r++, n >>= 1) {
+        if (n % 2) res = Math.max(res, r - l), l = r;
+    }
+    return res;
+}

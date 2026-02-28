@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/snakes-and-ladders/solutions/6797836/bfs/
 
-import { Deque } from 'npm:@datastructures-js/deque';
+import { Deque } from '@datastructures-js/deque';
 
 function snakesAndLadders(board: number[][]) {
     const size = board.length, target = size * size;
@@ -9,7 +9,7 @@ function snakesAndLadders(board: number[][]) {
     steps[1] = 0;
 
     while (!queue.isEmpty()) {
-        const curr = queue.popFront();
+        const curr = queue.popFront()!;
         for (let i = curr + 1; i <= Math.min(curr + 6, target); i++) {
             const rowIdx = Math.floor((i - 1) / size);
             const colIdx = (i - 1) % size;

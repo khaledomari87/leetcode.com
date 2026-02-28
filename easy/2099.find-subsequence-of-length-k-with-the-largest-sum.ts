@@ -1,7 +1,7 @@
 // deno-fmt-ignore-file
 
 // https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum/solutions/6893810/one-line-sort-min-heap-approaches/
-import { PriorityQueue } from 'npm:@datastructures-js/priority-queue';
+import { PriorityQueue } from '@datastructures-js/priority-queue';
 
 const maxSubsequence = (nums: number[], k: number) =>
     nums.map((n, i) => [n, i])       // map [value, index]

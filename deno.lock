@@ -1,11 +1,29 @@
 {
-  "version": "4",
+  "version": "5",
   "specifiers": {
-    "npm:@datastructures-js/deque@*": "1.0.5"
+    "npm:@datastructures-js/deque@*": "1.0.8",
+    "npm:@datastructures-js/deque@^1.0.8": "1.0.8",
+    "npm:@datastructures-js/priority-queue@*": "6.3.5",
+    "npm:@datastructures-js/priority-queue@^6.3.5": "6.3.5"
   },
   "npm": {
-    "@datastructures-js/deque@1.0.5": {
-      "integrity": "sha512-ogeIkpcCGnM+LAZYZqXBXn6Nx0a/ikkKDFPoa1MzZWRFyEdfVUNwkHclET/T8jkyNM1dN6NmPDfenNKcKazjjg=="
+    "@datastructures-js/deque@1.0.8": {
+      "integrity": "sha512-PSBhJ2/SmeRPRHuBv7i/fHWIdSC3JTyq56qb+Rq0wjOagi0/fdV5/B/3Md5zFZus/W6OkSPMaxMKKMNMrSmubg=="
+    },
+    "@datastructures-js/heap@4.3.7": {
+      "integrity": "sha512-Dx4un7Uj0dVxkfoq4RkpzsY2OrvNJgQYZ3n3UlGdl88RxxdHd7oTi21/l3zoxUUe0sXFuNUrfmWqlHzqnoN6Ug=="
+    },
+    "@datastructures-js/priority-queue@6.3.5": {
+      "integrity": "sha512-NmdmvLnkUyG67W6Iy8tP+865ILq5VDyZh90c8lHMOkYYydUNzOV0QNPCRAuj4AoHSm/V2DeuYvDKnvALaCwLvA==",
+      "dependencies": [
+        "@datastructures-js/heap"
+      ]
     }
+  },
+  "workspace": {
+    "dependencies": [
+      "npm:@datastructures-js/deque@^1.0.8",
+      "npm:@datastructures-js/priority-queue@^6.3.5"
+    ]
   }
 }

@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/design-task-manager/solutions/7201931/lazy-heap-hashmap/
 
-import { PriorityQueue } from 'npm:@datastructures-js/priority-queue';
+import { PriorityQueue } from '@datastructures-js/priority-queue';
 
 type Task = [number, number, number]; // [userId, taskId, priority]
 class TaskManager {
@@ -29,7 +29,7 @@ class TaskManager {
 
     execTop() {
         while (!this.heap.isEmpty()) {
-            const task = this.heap.dequeue();
+            const task = this.heap.dequeue()!;
             const cur = this.tasks.get(task[1]);
             if (cur?.[0] === task[0] && cur[2] === task[2]) {
                 this.rmv(task[1]);

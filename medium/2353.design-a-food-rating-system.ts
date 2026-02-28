@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/design-a-food-rating-system/solutions/7198782/lazy-heap-hashmap/
 
-import { PriorityQueue } from 'npm:@datastructures-js/priority-queue';
+import { PriorityQueue } from '@datastructures-js/priority-queue';
 
 class FoodRatings {
     private foodMap: Map<string, number>;
@@ -29,7 +29,7 @@ class FoodRatings {
     highestRated(cuisine: string) {
         const heap = this.cuisineMap.get(cuisine)!;
         while (true) {
-            const top = heap.front();
+            const top = heap.front()!;
             const currentRating = this.ratings[this.foodMap.get(top.name)!];
             if (top.rating === currentRating) return top.name;
             heap.dequeue(); // drop stale snapshot and continue

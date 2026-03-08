@@ -9,3 +9,12 @@ const findDifferentBinaryStringRandom = (nums: string[]): string => {
     while (set.has(rand)) rand = Math.floor(Math.random() * (2 ** nums.length));
     return rand.toString(2).padStart(nums.length, '0');
 };
+
+function findDifferentBinaryStringSet(nums: string[]) {
+    const s = new Set(nums.map((v) => parseInt(v, 2)));
+    for (let i = 0; true; i++) {
+        if (!s.has(i)) {
+            return i.toString(2).padStart(nums.length, '0');
+        }
+    }
+}

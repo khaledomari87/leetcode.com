@@ -1,0 +1,15 @@
+// https://leetcode.com/problems/unique-3-digit-even-numbers/solutions/7644242/brute-force-hash-set/
+
+function totalNumbers(digits: number[]) {
+    const s = new Set<number>();
+    for (let i = 0, n = digits.length; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            for (let k = 0; k < n; k++) {
+                if (i !== j && i !== k && j !== k) {
+                    s.add(100 * digits[i] + 10 * digits[j] + digits[k]);
+                }
+            }
+        }
+    }
+    return [...s].filter((v) => v > 99 && !(v % 2)).length;
+}

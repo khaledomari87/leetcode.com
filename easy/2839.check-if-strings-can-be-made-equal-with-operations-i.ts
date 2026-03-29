@@ -9,3 +9,6 @@ function canBeEqual(s1: string, s2: string) {
     }
     return a1.every((c, i) => c === s2[i]);
 }
+
+const canBeEqual2 = (s1: string, s2: string) =>
+    [0, 1].every((i) => `${s1[i]}${s1[i + 2]}`.repeat(2).includes(`${s2[i]}${s2[i + 2]}`));

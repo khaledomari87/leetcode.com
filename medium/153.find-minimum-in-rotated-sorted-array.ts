@@ -1,10 +1,10 @@
-// https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solutions/5921878/shortest-solution/
+// https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solutions/8238444/binary-search/
 
-function findMin(nums: number[]): number {
-    let L = 0, R = nums.length - 1;
-    while (L < R) {
-        const M = Math.floor((L + R) / 2);
-        nums[M] < nums[R] ? R = M : L = M + 1;
+function findMin(nums: number[]) {
+    let l = 0, r = nums.length - 1;
+    while (l < r) {
+        const m = (l + r) >> 1;
+        nums[m] < nums[r] ? r = m : l = m + 1;
     }
-    return nums[L];
+    return nums[r];
 }

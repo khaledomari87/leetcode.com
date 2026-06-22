@@ -1,30 +1,23 @@
-// https://leetcode.com/problems/maximum-number-of-balloons/description/
+// https://leetcode.com/problems/maximum-number-of-balloons/solutions/8351069/counting/
 
 function maxNumberOfBalloons(text: string): number {
     const map: { [key: string]: number } = { b: 0, a: 0, l: 0, o: 0, n: 0 };
     for (const char of text) {
-        char in map && map[char]++;
+        if (char in map) map[char]++;
     }
     return Math.floor(Math.min(map.b, map.a, map.l / 2, map.o / 2, map.n));
 }
 
 function maxNumberOfBalloons2(text: string): number {
-    const map: { [key: string]: number } = {
-        'b': 0,
-        'a': 0,
-        'l': 0,
-        'o': 0,
-        'n': 0,
-    };
+    const map: { [key: string]: number } = { b: 0, a: 0, l: 0, o: 0, n: 0 };
     for (const char of text) {
         char in map && map[char]++;
     }
-    let output = map.b;
+    let res = 0;
     for (const char in map) {
-        const count: number = map[char];
-        output = Math.min(output, count / (['l', 'o'].includes(char) ? 2 : 1));
+        res = Math.min(res, map[char] / (1 + +['l', 'o'].includes(char)));
     }
-    return Math.floor(output);
+    return Math.floor(res);
 }
 
 function maxNumberOfBalloons3(text: string): number {
@@ -35,9 +28,9 @@ function maxNumberOfBalloons3(text: string): number {
             map.set(char, item + 1);
         }
     }
-    let output = map.get('b') || 0;
+    let res = 0;
     for (const [char, count] of map.entries()) {
-        output = Math.min(output, count / (['l', 'o'].includes(char) ? 2 : 1));
+        res = Math.min(res, count / (1 + +['l', 'o'].includes(char)));
     }
-    return Math.floor(output);
+    return Math.floor(res);
 }

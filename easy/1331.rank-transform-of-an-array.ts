@@ -3,5 +3,5 @@
 function arrayRankTransform(arr: number[]) {
     const sorted = [...new Set(arr)].sort((a, b) => a - b);
     const rank = new Map(sorted.map((v, i) => [v, i + 1]));
-    return arr.map((v) => rank.get(v));
+    return arr.map((v) => rank.get(v)!);
 }
